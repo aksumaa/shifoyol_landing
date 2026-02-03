@@ -1,0 +1,1659 @@
+<!DOCTYPE html>
+<html lang="ru" class="scroll-smooth">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>ShifoYo'l - Умная платформа для управления здоровьем</title>
+    <meta name="description" content="ShifoYo'l соединяет пациентов и клиники. Напоминания о лекарствах, онлайн-запись, поиск ближайших клиник.">
+    <link rel="stylesheet" href="css/main.css">
+  </head>
+<body class="font-sans antialiased bg-slate-50 text-slate-900">
+
+    <!-- Navigation -->
+    <nav class="fixed top-0 w-full z-50 transition-all duration-300" id="navbar">
+        <div class="max-w-[1400px] mx-auto px-6 md:px-12 py-6 flex justify-between items-center">
+            <!-- Logo with Medical Icon -->
+            <a href="#" class="flex items-center gap-3 text-2xl font-bold text-blue-600 tracking-tight">
+                <div class="w-10 h-10 bg-blue-600 rounded-xl flex items-center justify-center">
+                    <svg class="w-6 h-6 text-white" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                        <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M12 4.354a4 4 0 110 5.292M15 21H3v-1a6 6 0 0112 0v1zm0 0h6v-1a6 6 0 00-9-5.197M13 7a4 4 0 11-8 0 4 4 0 018 0z"/>
+                    </svg>
+                </div>
+                <span>ShifoYo'l</span>
+            </a>
+
+            <!-- Desktop Menu -->
+            <div class="hidden md:flex items-center gap-8 text-sm font-medium">
+                <a href="#features" class="hover:text-blue-600 transition-colors" data-i18n="nav.features">Возможности</a>
+                <a href="#pricing" class="hover:text-blue-600 transition-colors" data-i18n="nav.pricing">Тарифы</a>
+                <a href="#benefits" class="hover:text-blue-600 transition-colors" data-i18n="nav.benefits">Преимущества</a>
+                <a href="#contact" class="hover:text-blue-600 transition-colors" data-i18n="nav.contact">Контакты</a>
+            </div>
+
+            <!-- Language Switcher + Social + CTA -->
+            <div class="flex items-center gap-4">
+                <!-- Instagram Icon -->
+                <a href="https://www.instagram.com/shifoyol?igsh=dmRybnI3cGc5d3F6&utm_source=qr" target="_blank" rel="noopener noreferrer" class="w-10 h-10 bg-gradient-to-br from-purple-500 to-pink-500 rounded-full flex items-center justify-center hover:shadow-lg transition-all">
+                    <svg class="w-5 h-5 text-white" fill="currentColor" viewBox="0 0 24 24">
+                        <path d="M12 0C8.74 0 8.333.015 7.053.072 5.775.132 4.905.333 4.14.63c-.789.306-1.459.717-2.126 1.384S.935 3.35.63 4.14C.333 4.905.131 5.775.072 7.053.012 8.333 0 8.74 0 12s.015 3.667.072 4.947c.06 1.277.261 2.148.558 2.913.306.788.717 1.459 1.384 2.126.667.666 1.336 1.079 2.126 1.384.766.296 1.636.499 2.913.558C8.333 23.988 8.74 24 12 24s3.667-.015 4.947-.072c1.277-.06 2.148-.262 2.913-.558.788-.306 1.459-.718 2.126-1.384.666-.667 1.079-1.335 1.384-2.126.296-.765.499-1.636.558-2.913.06-1.28.072-1.687.072-4.947s-.015-3.667-.072-4.947c-.06-1.277-.262-2.149-.558-2.913-.306-.789-.718-1.459-1.384-2.126C21.319 1.347 20.651.935 19.86.63c-.765-.297-1.636-.499-2.913-.558C15.667.012 15.26 0 12 0zm0 2.16c3.203 0 3.585.016 4.85.071 1.17.055 1.805.249 2.227.415.562.217.96.477 1.382.896.419.42.679.819.896 1.381.164.422.36 1.057.413 2.227.057 1.266.07 1.646.07 4.85s-.015 3.585-.074 4.85c-.06-1.277-.256 1.805-.421 2.227-.224.562-.479.96-.899 1.382-.419.419-.824.679-1.38.896-.42.164-1.065.36-2.235.413-1.274.057-1.649.07-4.859.07-3.211 0-3.586-.015-4.859-.074-1.171-.061-1.816-.256-2.236-.421-.569-.224-.96-.479-1.379-.899-.421-.419-.69-.824-.9-1.38-.165-.42-.359-1.065-.42-2.235-.045-1.26-.061-1.649-.061-4.844 0-3.196.016-3.586.061-4.861.061-1.17.255-1.814.42-2.234.21-.57.479-.96.9-1.381.419-.419.81-.689 1.379-.898.42-.166 1.051-.361 2.221-.421 1.275-.045 1.65-.06 4.859-.06l.045.03zm0 3.678c-3.405 0-6.162 2.76-6.162 6.162 0 3.405 2.76 6.162 6.162 6.162 3.405 0 6.162-2.76 6.162-6.162 0-3.405-2.76-6.162-6.162-6.162zM12 16c-2.21 0-4-1.79-4-4s1.79-4 4-4 4 1.79 4 4-1.79 4-4 4zm7.846-10.405c0 .795-.646 1.44-1.44 1.44-.795 0-1.44-.646-1.44-1.44 0-.794.646-1.439 1.44-1.439.793-.001 1.44.645 1.44 1.439z"/>
+                    </svg>
+                </a>
+                
+                <!-- Language Switcher -->
+                <div class="language-switcher flex gap-1 bg-white/90 backdrop-blur-sm rounded-full p-1 border border-slate-200">
+                    <button class="px-3 py-1.5 rounded-full text-xs font-semibold transition-all duration-200" data-lang="uz" onclick="switchLanguage('uz')">
+                        O'zbek
+                    </button>
+                    <button class="px-3 py-1.5 rounded-full text-xs font-semibold transition-all duration-200 bg-blue-600 text-white" data-lang="ru" onclick="switchLanguage('ru')">
+                        Русский
+                    </button>
+                </div>
+
+                <!-- CTA Button - Opens Registration Modal -->
+                <button onclick="openRegistrationModal()" class="hidden sm:inline-flex items-center gap-2 bg-blue-600 text-white px-6 py-3 rounded-full text-sm font-semibold hover:bg-blue-700 transition-colors" data-i18n="nav.cta">
+                    Klinikani ro'yxatdan o'tкazish
+                </button>
+            </div>
+        </div>
+    </nav>
+
+    <!-- Hero Section -->
+    <header class="relative min-h-[90vh] rounded-bl-[80px] md:rounded-bl-[120px] overflow-hidden bg-gradient-to-br from-blue-600 to-blue-800">
+        <!-- Background Pattern -->
+        <div class="absolute inset-0 opacity-10">
+            <svg width="100%" height="100%">
+                <pattern id="grid" width="40" height="40" patternUnits="userSpaceOnUse">
+                    <path d="M 40 0 L 0 0 0 40" fill="none" stroke="white" stroke-width="1"/>
+                </pattern>
+                <rect width="100%" height="100%" fill="url(#grid)" />
+            </svg>
+        </div>
+
+        <!-- Floating Info Card -->
+        <div class="absolute top-24 right-6 md:right-12 bg-white/95 backdrop-blur-sm p-6 md:p-8 rounded-[30px] w-72 md:w-80 shadow-2xl z-20 hidden md:block animate-clip-in" style="animation-delay: 0.6s">
+            <div class="flex items-center gap-3 mb-4">
+                <div class="w-12 h-12 bg-gradient-to-br from-cyan-400 to-blue-500 rounded-2xl flex items-center justify-center">
+                    <svg class="w-6 h-6 text-white" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                        <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M15 17h5l-1.405-1.405A2.032 2.032 0 0118 14.158V11a6.002 6.002 0 00-4-5.659V5a2 2 0 10-4 0v.341C7.67 6.165 6 8.388 6 11v3.159c0 .538-.214 1.055-.595 1.436L4 17h5m6 0v1a3 3 0 11-6 0v-1m6 0H9"/>
+                    </svg>
+                </div>
+                <div>
+                    <h3 class="font-bold text-lg text-slate-900" data-i18n="hero.card.title">Teз orada ishga tushadi</h3>
+                    <p class="text-xs text-slate-500" data-i18n="hero.card.subtitle">Beta versiya</p>
+                </div>
+            </div>
+            <div class="space-y-3 text-sm text-slate-600">
+                <div class="flex items-start gap-2">
+                    <svg class="w-5 h-5 text-cyan-500 flex-shrink-0" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                        <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M5 13l4 4L19 7"/>
+                    </svg>
+                    <span data-i18n="hero.card.feature1">Dori qабул qilish eslatmalари</span>
+                </div>
+                <div class="flex items-start gap-2">
+                    <svg class="w-5 h-5 text-cyan-500 flex-shrink-0" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                        <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M5 13l4 4L19 7"/>
+                    </svg>
+                    <span data-i18n="hero.card.feature2">Klinikалarga onlayн yozilish</span>
+                </div>
+                <div class="flex items-start gap-2">
+                    <svg class="w-5 h-5 text-cyan-500 flex-shrink-0" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                        <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M5 13l4 4L19 7"/>
+                    </svg>
+                    <span data-i18n="hero.card.feature3">Aqlli klinikalarni qидирish</span>
+                </div>
+            </div>
+        </div>
+
+        <!-- Hero Content -->
+        <div class="relative z-10 max-w-[1400px] mx-auto px-6 md:px-12 pt-48 pb-24 h-full flex flex-col justify-end">
+            <div class="max-w-4xl">
+                <h1 class="text-5xl md:text-6xl lg:text-7xl font-bold leading-[1.1] mb-8">
+                    <span class="text-highlight-white box-decoration-clone" data-i18n="hero.title1">Klinikalar va bemорлarnи</span><br>
+                    <span class="text-highlight-white box-decoration-clone" data-i18n="hero.title2">бог'lovчи zamonaviй</span><br>
+                    <span class="text-highlight-white box-decoration-clone" data-i18n="hero.title3">tibbiy platforma</span>
+                </h1>
+                <p class="text-xl md:text-2xl text-white/90 mb-10 max-w-2xl leading-relaxed" data-i18n="hero.subtitle">
+                    Dori eslatmalари, onlayn yozилish va eng yaqin klinikalarni qидирish — hammasи ShifoYo'lda
+                </p>
+                <div class="flex flex-col sm:flex-row gap-4">
+                    <button onclick="openRegistrationModal()" class="glass-button all-unset cursor-pointer outline-none focus:outline-none z-30 pointer-events-auto text-base rounded-full relative group">
+                        <span class="button-text relative block select-none font-semibold text-lg px-8 py-4 text-white" data-i18n="hero.cta.primary">
+                            Klinikani ro'yxатдан o'tкazish
+                        </span>
+                        <div class="button-shine"></div>
+                    </button>
+                    <a href="#features" class="inline-flex items-center justify-center gap-2 bg-white/10 backdrop-blur text-white border-2 border-white/30 px-8 py-4 rounded-full text-lg font-semibold hover:bg-white/20 transition-all" data-i18n="hero.cta.secondary">
+                        Batafsil
+                    </a>
+                </div>
+            </div>
+        </div>
+    </header>
+
+    <!-- About Platform -->
+    <section class="py-20 md:py-32 px-6 md:px-12 bg-gradient-to-br from-blue-50 to-cyan-50">
+        <div class="max-w-[1400px] mx-auto">
+            <div class="grid lg:grid-cols-2 gap-16 items-center">
+                <!-- Logo & Visual -->
+                <div class="relative animate-clip-in">
+                    <div class="bg-white p-12 rounded-[40px] shadow-2xl border border-blue-100">
+                        <div class="flex items-center gap-4 mb-8">
+                            <div class="w-20 h-20 bg-blue-600 rounded-2xl flex items-center justify-center">
+                                <svg class="w-12 h-12 text-white" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                                    <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M12 4.354a4 4 0 110 5.292M15 21H3v-1a6 6 0 0112 0v1zm0 0h6v-1a6 6 0 00-9-5.197M13 7a4 4 0 11-8 0 4 4 0 018 0z"/>
+                                </svg>
+                            </div>
+                            <div>
+                                <h3 class="text-3xl font-bold text-blue-600">ShifoYo'l</h3>
+                                <p class="text-slate-600" data-i18n="about.tagline">Zamonaviy tibbiy platforma</p>
+                            </div>
+                        </div>
+                        <div class="space-y-4">
+                            <div class="flex items-center gap-3 text-slate-700">
+                                <svg class="w-6 h-6 text-cyan-500" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                                    <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 12l2 2 4-4m5.618-4.016A11.955 11.955 0 0112 2.944a11.955 11.955 0 01-8.618 3.04A12.02 12.02 0 003 9c0 5.591 3.824 10.29 9 11.622 5.176-1.332 9-6.03 9-11.622 0-1.042-.133-2.052-.382-3.016z"/>
+                                </svg>
+                                <span data-i18n="about.feature1">Ishonчли va xавфсиз</span>
+                            </div>
+                            <div class="flex items-center gap-3 text-slate-700">
+                                <svg class="w-6 h-6 text-cyan-500" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                                    <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M13 10V3L4 14h7v7l9-11h-7z"/>
+                                </svg>
+                                <span data-i18n="about.feature2">Teз va qulay</span>
+                            </div>
+                            <div class="flex items-center gap-3 text-slate-700">
+                                <svg class="w-6 h-6 text-cyan-500" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                                    <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M12 8c-1.657 0-3 .895-3 2s1.343 2 3 2 3 .895 3 2-1.343 2-3 2m0-8c1.11 0 2.08.402 2.599 1M12 8V7m0 1v8m0 0v1m0-1c-1.11 0-2.08-.402-2.599-1M21 12a9 9 0 11-18 0 9 9 0 0118 0z"/>
+                                </svg>
+                                <span data-i18n="about.feature3">Tejamкор narxlar</span>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Description -->
+                <div class="space-y-8 animate-clip-in" style="animation-delay: 0.2s">
+                    <h2 class="text-4xl md:text-5xl font-bold tracking-tight leading-tight" data-i18n="about.title">ShifoYo'l haqida</h2>
+                    <div class="space-y-4">
+                        <p class="text-xl text-slate-700 leading-relaxed" data-i18n="about.description1">
+                            ShifoYo'l — bu klinikalar va bemорлarnи bog'lovchi zamonaviy tibbiy platforma.
+                        </p>
+                        <p class="text-xl text-slate-700 leading-relaxed" data-i18n="about.description2">
+                            Клиникам помогает находить новых пациентов, а пациентам — надёжные медицинские услуги.
+                        </p>
+                    </div>
+                    <div class="grid grid-cols-2 gap-6">
+                        <div class="bg-white p-6 rounded-2xl shadow-lg border border-blue-100">
+                            <div class="text-4xl font-bold text-blue-600 mb-2">2026</div>
+                            <p class="text-slate-600" data-i18n="about.stat1">Beta versiya</p>
+                        </div>
+                        <div class="bg-white p-6 rounded-2xl shadow-lg border border-blue-100">
+                            <div class="text-4xl font-bold text-blue-600 mb-2">24/7</div>
+                            <p class="text-slate-600" data-i18n="about.stat2">Qo'llаб-quvvатlash</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Problem Section -->
+    <section class="py-20 md:py-32 px-6 md:px-12 bg-white">
+        <div class="max-w-[1400px] mx-auto">
+            <div class="text-center mb-16 animate-clip-in">
+                <h2 class="text-4xl md:text-5xl font-bold tracking-tight mb-6" data-i18n="problem.title">Проблемы, которые мы решаем</h2>
+                <p class="text-xl text-slate-600 max-w-3xl mx-auto" data-i18n="problem.subtitle">Современная медицина требует современных решений</p>
+            </div>
+
+            <div class="grid md:grid-cols-3 gap-8">
+                <!-- Problem 1 -->
+                <div class="bg-gradient-to-br from-red-50 to-pink-50 p-8 rounded-[30px] border border-red-100 animate-clip-in" style="animation-delay: 0.1s">
+                    <div class="w-14 h-14 bg-red-100 rounded-2xl flex items-center justify-center mb-6">
+                        <svg class="w-8 h-8 text-red-600" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M12 8v4m0 4h.01M21 12a9 9 0 11-18 0 9 9 0 0118 0z"/>
+                        </svg>
+                    </div>
+                    <h3 class="text-2xl font-bold mb-4 text-slate-900" data-i18n="problem.item1.title">Забывают принимать лекарства</h3>
+                    <p class="text-slate-600 leading-relaxed" data-i18n="problem.item1.description">Пациенты пропускают приём препаратов, что снижает эффективность лечения и ухудшает здоровье</p>
+                </div>
+
+                <!-- Problem 2 -->
+                <div class="bg-gradient-to-br from-orange-50 to-amber-50 p-8 rounded-[30px] border border-orange-100 animate-clip-in" style="animation-delay: 0.2s">
+                    <div class="w-14 h-14 bg-orange-100 rounded-2xl flex items-center justify-center mb-6">
+                        <svg class="w-8 h-8 text-orange-600" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M21 21l-6-6m2-5a7 7 0 11-14 0 7 7 0 0114 0z"/>
+                        </svg>
+                    </div>
+                    <h3 class="text-2xl font-bold mb-4 text-slate-900" data-i18n="problem.item2.title">Сложно найти клинику</h3>
+                    <p class="text-slate-600 leading-relaxed" data-i18n="problem.item2.description">Поиск надёжной и доступной клиники занимает много времени и усилий</p>
+                </div>
+
+                <!-- Problem 3 -->
+                <div class="bg-gradient-to-br from-blue-50 to-cyan-50 p-8 rounded-[30px] border border-blue-100 animate-clip-in" style="animation-delay: 0.3s">
+                    <div class="w-14 h-14 bg-blue-100 rounded-2xl flex items-center justify-center mb-6">
+                        <svg class="w-8 h-8 text-blue-600" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M19 21V5a2 2 0 00-2-2H7a2 2 0 00-2 2v16m14 0h2m-2 0h-5m-9 0H3m2 0h5M9 7h1m-1 4h1m4-4h1m-1 4h1m-5 10v-5a1 1 0 011-1h2a1 1 0 011 1v5m-4 0h4"/>
+                        </svg>
+                    </div>
+                    <h3 class="text-2xl font-bold mb-4 text-slate-900" data-i18n="problem.item3.title">Клиники теряют пациентов</h3>
+                    <p class="text-slate-600 leading-relaxed" data-i18n="problem.item3.description">Медицинские центры не имеют онлайн-присутствия и теряют потенциальных пациентов</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Solution Section -->
+    <section class="py-20 md:py-32 px-6 md:px-12 bg-gradient-to-br from-slate-50 to-blue-50">
+        <div class="max-w-[1400px] mx-auto">
+            <div class="grid lg:grid-cols-2 gap-16 items-center">
+                <!-- Image/Visual -->
+                <div class="relative animate-clip-in">
+                    <div class="relative rounded-[40px] overflow-hidden shadow-2xl">
+                        <div class="aspect-[4/5] bg-gradient-to-br from-blue-600 to-cyan-500 flex items-center justify-center p-12">
+                            <div class="grid grid-cols-2 gap-4 w-full">
+                                <!-- Mock UI Cards -->
+                                <div class="bg-white/95 backdrop-blur p-6 rounded-2xl shadow-xl transform -rotate-3">
+                                    <div class="w-12 h-12 bg-blue-100 rounded-xl mb-4 flex items-center justify-center">
+                                        <svg class="w-6 h-6 text-blue-600" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                                            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M15 17h5l-1.405-1.405A2.032 2.032 0 0118 14.158V11a6.002 6.002 0 00-4-5.659V5a2 2 0 10-4 0v.341C7.67 6.165 6 8.388 6 11v3.159c0 .538-.214 1.055-.595 1.436L4 17h5m6 0v1a3 3 0 11-6 0v-1m6 0H9"/>
+                                        </svg>
+                                    </div>
+                                    <div class="h-2 bg-slate-200 rounded w-3/4 mb-2"></div>
+                                    <div class="h-2 bg-slate-100 rounded w-full"></div>
+                                </div>
+
+                                <div class="bg-white/95 backdrop-blur p-6 rounded-2xl shadow-xl transform rotate-2">
+                                    <div class="w-12 h-12 bg-cyan-100 rounded-xl mb-4 flex items-center justify-center">
+                                        <svg class="w-6 h-6 text-cyan-600" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                                            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M8 7V3m8 4V3m-9 8h10M5 21h14a2 2 0 002-2V7a2 2 0 00-2-2H5a2 2 0 00-2 2v12a2 2 0 002 2z"/>
+                                        </svg>
+                                    </div>
+                                    <div class="h-2 bg-slate-200 rounded w-2/3 mb-2"></div>
+                                    <div class="h-2 bg-slate-100 rounded w-full"></div>
+                                </div>
+
+                                <div class="bg-white/95 backdrop-blur p-6 rounded-2xl shadow-xl transform rotate-1 col-span-2">
+                                    <div class="flex items-center gap-4 mb-4">
+                                        <div class="w-12 h-12 bg-purple-100 rounded-xl flex items-center justify-center">
+                                            <svg class="w-6 h-6 text-purple-600" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                                                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M17.657 16.657L13.414 20.9a1.998 1.998 0 01-2.827 0z"/>
+                                                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 12l2 2 4-4m5.618-4.016A11.955 11.955 0 0112 2.944a11.955 11.955 0 01-8.618 3.04A12.02 12.02 0 003 9c0 5.591 3.824 10.29 9 11.622 5.176-1.332 9-6.03 9-11.622 0-1.042-.133-2.052-.382-3.016z"/>
+                                            </svg>
+                                        </div>
+                                        <div class="flex-1">
+                                            <div class="h-2 bg-slate-200 rounded w-1/2 mb-2"></div>
+                                            <div class="h-2 bg-slate-100 rounded w-3/4"></div>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Text Content -->
+                <div class="space-y-8 animate-clip-in" style="animation-delay: 0.2s">
+                    <h2 class="text-4xl md:text-5xl font-bold tracking-tight leading-tight" data-i18n="solution.title">ShifoYo'l решает все эти проблемы в одной платформе</h2>
+                    <p class="text-xl text-slate-600 leading-relaxed" data-i18n="solution.description">Мы создали единую экосистему, которая объединяет пациентов и клиники, делая медицинское обслуживание удобным и доступным для всех</p>
+                    
+                    <div class="space-y-4">
+                        <div class="flex items-start gap-4">
+                            <div class="w-8 h-8 bg-blue-100 rounded-lg flex items-center justify-center flex-shrink-0">
+                                <svg class="w-5 h-5 text-blue-600" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                                    <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M5 13l4 4L19 7"/>
+                                </svg>
+                            </div>
+                            <div>
+                                <h3 class="font-semibold text-lg mb-1" data-i18n="solution.benefit1.title">Для пациентов</h3>
+                                <p class="text-slate-600" data-i18n="solution.benefit1.description">Напоминания, запись и поиск клиник в одном приложении</p>
+                            </div>
+                        </div>
+
+                        <div class="flex items-start gap-4">
+                            <div class="w-8 h-8 bg-cyan-100 rounded-lg flex items-center justify-center flex-shrink-0">
+                                <svg class="w-5 h-5 text-cyan-600" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                                    <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M5 13l4 4L19 7"/>
+                                </svg>
+                            </div>
+                            <div>
+                                <h3 class="font-semibold text-lg mb-1" data-i18n="solution.benefit2.title">Для клиник</h3>
+                                <p class="text-slate-600" data-i18n="solution.benefit2.description">Цифровое присутствие и привлечение новых пациентов</p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Features Section -->
+    <section class="py-20 md:py-32 px-6 md:px-12 bg-white rounded-t-[60px] md:rounded-t-[80px]" id="features">
+        <div class="max-w-[1400px] mx-auto">
+            <div class="text-center mb-16 animate-clip-in">
+                <h2 class="text-4xl md:text-5xl font-bold tracking-tight mb-6" data-i18n="features.title">Возможности платформы</h2>
+                <p class="text-xl text-slate-600 max-w-3xl mx-auto" data-i18n="features.subtitle">Всё необходимое для управления здоровьем в одном месте</p>
+            </div>
+
+            <div class="grid md:grid-cols-2 gap-8">
+                <!-- Feature 1 -->
+                <div class="glass-panel p-8 rounded-3xl spotlight-card group cursor-pointer animate-clip-in" style="animation-delay: 0.1s" onmousemove="handleSpotlight(event)">
+                    <div class="w-16 h-16 bg-gradient-to-br from-blue-500 to-cyan-500 rounded-2xl flex items-center justify-center mb-6 group-hover:scale-110 transition-transform">
+                        <svg class="w-8 h-8 text-white" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M15 17h5l-1.405-1.405A2.032 2.032 0 0118 14.158V11a6.002 6.002 0 00-4-5.659V5a2 2 0 10-4 0v.341C7.67 6.165 6 8.388 6 11v3.159c0 .538-.214 1.055-.595 1.436L4 17h5m6 0v1a3 3 0 11-6 0v-1m6 0H9"/>
+                        </svg>
+                    </div>
+                    <h3 class="text-2xl font-bold mb-4" data-i18n="features.item1.title">Напоминания о лекарствах</h3>
+                    <p class="text-slate-600 leading-relaxed mb-6" data-i18n="features.item1.description">Умные уведомления помогут не пропустить приём препаратов. Настройте расписание один раз и получайте напоминания вовремя.</p>
+                    <ul class="space-y-3">
+                        <li class="flex items-center gap-3 text-sm text-slate-600">
+                            <svg class="w-5 h-5 text-cyan-500 flex-shrink-0" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M5 13l4 4L19 7"/>
+                            </svg>
+                            <span data-i18n="features.item1.point1">Персональное расписание приёма</span>
+                        </li>
+                        <li class="flex items-center gap-3 text-sm text-slate-600">
+                            <svg class="w-5 h-5 text-cyan-500 flex-shrink-0" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M5 13l4 4L19 7"/>
+                            </svg>
+                            <span data-i18n="features.item1.point2">Push-уведомления на телефон</span>
+                        </li>
+                        <li class="flex items-center gap-3 text-sm text-slate-600">
+                            <svg class="w-5 h-5 text-cyan-500 flex-shrink-0" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M5 13l4 4L19 7"/>
+                            </svg>
+                            <span data-i18n="features.item1.point3">История приёма препаратов</span>
+                        </li>
+                    </ul>
+                </div>
+
+                <!-- Feature 2 -->
+                <div class="glass-panel p-8 rounded-3xl spotlight-card group cursor-pointer animate-clip-in" style="animation-delay: 0.2s" onmousemove="handleSpotlight(event)">
+                    <div class="w-16 h-16 bg-gradient-to-br from-purple-500 to-pink-500 rounded-2xl flex items-center justify-center mb-6 group-hover:scale-110 transition-transform">
+                        <svg class="w-8 h-8 text-white" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M8 7V3m8 4V3m-9 8h10M5 21h14a2 2 0 002-2V7a2 2 0 00-2-2H5a2 2 0 00-2 2v12a2 2 0 002 2z"/>
+                        </svg>
+                    </div>
+                    <h3 class="text-2xl font-bold mb-4" data-i18n="features.item2.title">Онлайн-запись в клинику</h3>
+                    <p class="text-slate-600 leading-relaxed mb-6" data-i18n="features.item2.description">Записывайтесь к врачу в удобное время без звонков и очередей. Выбирайте специалиста, дату и время прямо в приложении.</p>
+                    <ul class="space-y-3">
+                        <li class="flex items-center gap-3 text-sm text-slate-600">
+                            <svg class="w-5 h-5 text-pink-500 flex-shrink-0" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M5 13l4 4L19 7"/>
+                            </svg>
+                            <span data-i18n="features.item2.point1">Выбор врача и времени</span>
+                        </li>
+                        <li class="flex items-center gap-3 text-sm text-slate-600">
+                            <svg class="w-5 h-5 text-pink-500 flex-shrink-0" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M5 13l4 4L19 7"/>
+                            </svg>
+                            <span data-i18n="features.item2.point2">Подтверждение записи</span>
+                        </li>
+                        <li class="flex items-center gap-3 text-sm text-slate-600">
+                            <svg class="w-5 h-5 text-pink-500 flex-shrink-0" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M5 13l4 4L19 7"/>
+                            </svg>
+                            <span data-i18n="features.item2.point3">Напоминание о визите</span>
+                        </li>
+                    </ul>
+                </div>
+
+                <!-- Feature 3 -->
+                <div class="glass-panel p-8 rounded-3xl spotlight-card group cursor-pointer animate-clip-in" style="animation-delay: 0.3s" onmousemove="handleSpotlight(event)">
+                    <div class="w-16 h-16 bg-gradient-to-br from-orange-500 to-red-500 rounded-2xl flex items-center justify-center mb-6 group-hover:scale-110 transition-transform">
+                        <svg class="w-8 h-8 text-white" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M17.657 16.657L13.414 20.9a1.998 1.998 0 01-2.827 0l-4.244-4.243a8 8 0 1111.314 0z"/>
+                            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M15 11a3 3 0 11-6 0 3 3 0 016 0z"/>
+                        </svg>
+                    </div>
+                    <h3 class="text-2xl font-bold mb-4" data-i18n="features.item3.title">Умный поиск клиник</h3>
+                    <p class="text-slate-600 leading-relaxed mb-6" data-i18n="features.item3.description">Находите ближайшие клиники с лучшими ценами и отзывами. Фильтруйте по специализации, расстоянию и стоимости услуг.</p>
+                    <ul class="space-y-3">
+                        <li class="flex items-center gap-3 text-sm text-slate-600">
+                            <svg class="w-5 h-5 text-orange-500 flex-shrink-0" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M5 13l4 4L19 7"/>
+                            </svg>
+                            <span data-i18n="features.item3.point1">Поиск по геолокации</span>
+                        </li>
+                        <li class="flex items-center gap-3 text-sm text-slate-600">
+                            <svg class="w-5 h-5 text-orange-500 flex-shrink-0" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M5 13l4 4L19 7"/>
+                            </svg>
+                            <span data-i18n="features.item3.point2">Сравнение цен</span>
+                        </li>
+                        <li class="flex items-center gap-3 text-sm text-slate-600">
+                            <svg class="w-5 h-5 text-orange-500 flex-shrink-0" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M5 13l4 4L19 7"/>
+                            </svg>
+                            <span data-i18n="features.item3.point3">Отзывы пациентов</span>
+                        </li>
+                    </ul>
+                </div>
+
+                <!-- Feature 4 -->
+                <div class="glass-panel p-8 rounded-3xl spotlight-card group cursor-pointer animate-clip-in" style="animation-delay: 0.4s" onmousemove="handleSpotlight(event)">
+                    <div class="w-16 h-16 bg-gradient-to-br from-emerald-500 to-teal-500 rounded-2xl flex items-center justify-center mb-6 group-hover:scale-110 transition-transform">
+                        <svg class="w-8 h-8 text-white" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M12 4.354a4 4 0 110 5.292M15 21H3v-1a6 6 0 0112 0v1zm0 0h6v-1a6 6 0 00-9-5.197M13 7a4 4 0 11-8 0 4 4 0 018 0z"/>
+                        </svg>
+                    </div>
+                    <h3 class="text-2xl font-bold mb-4" data-i18n="features.item4.title">Платформа для клиник</h3>
+                    <p class="text-slate-600 leading-relaxed mb-6" data-i18n="features.item4.description">Веб-платформа для медицинских центров с управлением записями, профилем клиники и аналитикой пациентов.</p>
+                    <ul class="space-y-3">
+                        <li class="flex items-center gap-3 text-sm text-slate-600">
+                            <svg class="w-5 h-5 text-emerald-500 flex-shrink-0" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M5 13l4 4L19 7"/>
+                            </svg>
+                            <span data-i18n="features.item4.point1">Управление расписанием</span>
+                        </li>
+                        <li class="flex items-center gap-3 text-sm text-slate-600">
+                            <svg class="w-5 h-5 text-emerald-500 flex-shrink-0" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M5 13l4 4L19 7"/>
+                            </svg>
+                            <span data-i18n="features.item4.point2">Профиль клиники</span>
+                        </li>
+                        <li class="flex items-center gap-3 text-sm text-slate-600">
+                            <svg class="w-5 h-5 text-emerald-500 flex-shrink-0" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M5 13l4 4L19 7"/>
+                            </svg>
+                            <span data-i18n="features.item4.point3">Статистика и отчёты</span>
+                        </li>
+                    </ul>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Pricing Section -->
+    <section class="py-20 md:py-32 px-6 md:px-12 bg-gradient-to-br from-slate-50 to-blue-50 rounded-t-[60px] md:rounded-t-[80px]" id="pricing">
+        <div class="max-w-[1400px] mx-auto">
+            <div class="text-center mb-16 animate-clip-in">
+                <h2 class="text-4xl md:text-5xl font-bold tracking-tight mb-6" data-i18n="pricing.title">Klinikalar uchun tariflar</h2>
+                <p class="text-xl text-slate-600 max-w-3xl mx-auto" data-i18n="pricing.subtitle">Klinikangizga mos keladigan tarifni tanlang</p>
+            </div>
+
+            <div class="grid md:grid-cols-2 gap-8 max-w-5xl mx-auto">
+                <!-- Starter Plan - $70 -->
+                <div class="bg-white border-2 border-slate-200 p-8 rounded-3xl shadow-xl animate-clip-in hover:shadow-2xl transition-all" style="animation-delay: 0.1s">
+                    <div class="mb-8">
+                        <h3 class="text-2xl font-bold mb-2" data-i18n="pricing.starter.name">Starter</h3>
+                        <p class="text-slate-600 text-sm" data-i18n="pricing.starter.description">Kichik klinikalar uchun</p>
+                    </div>
+                    <div class="mb-8">
+                        <div class="flex items-baseline gap-2">
+                            <span class="text-5xl font-bold">$70</span>
+                            <span class="text-slate-500" data-i18n="pricing.starter.period">/oyiga</span>
+                        </div>
+                    </div>
+                    <ul class="space-y-4 mb-8">
+                        <li class="flex items-start gap-3">
+                            <svg class="w-6 h-6 text-blue-600 flex-shrink-0" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M5 13l4 4L19 7"/>
+                            </svg>
+                            <span class="text-slate-700" data-i18n="pricing.starter.feature1">Platformada klinika profili</span>
+                        </li>
+                        <li class="flex items-start gap-3">
+                            <svg class="w-6 h-6 text-blue-600 flex-shrink-0" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M5 13l4 4L19 7"/>
+                            </svg>
+                            <span class="text-slate-700" data-i18n="pricing.starter.feature2">Onlayn yozilish tizimi</span>
+                        </li>
+                        <li class="flex items-start gap-3">
+                            <svg class="w-6 h-6 text-blue-600 flex-shrink-0" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M5 13l4 4L19 7"/>
+                            </svg>
+                            <span class="text-slate-700" data-i18n="pricing.starter.feature3">Qidiruvda asosий ko'rinish</span>
+                        </li>
+                        <li class="flex items-start gap-3">
+                            <svg class="w-6 h-6 text-blue-600 flex-shrink-0" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M5 13l4 4L19 7"/>
+                            </svg>
+                            <span class="text-slate-700" data-i18n="pricing.starter.feature4">Email orqali qo'llаб-quvvатlash</span>
+                        </li>
+                    </ul>
+                    <button onclick="openRegistrationModal()" class="w-full bg-slate-900 text-white py-4 rounded-full font-semibold hover:bg-slate-800 transition-colors" data-i18n="pricing.starter.cta">
+                        Tarifni tanlash
+                    </button>
+                </div>
+
+                <!-- Pro Plan - $100 (Highlighted) -->
+                <div class="pricing-card-pro bg-white border-2 border-blue-600 p-8 rounded-3xl shadow-2xl animate-clip-in relative transform md:scale-105" style="animation-delay: 0.2s">
+                    <div class="absolute -top-4 left-1/2 transform -translate-x-1/2 bg-gradient-to-r from-blue-600 to-cyan-500 text-white px-6 py-2 rounded-full text-xs font-bold uppercase tracking-wider">
+                        <span data-i18n="pricing.pro.badge">Tavsiya etamiz</span>
+                    </div>
+                    <div class="mb-8">
+                        <h3 class="text-2xl font-bold mb-2" data-i18n="pricing.pro.name">Pro</h3>
+                        <p class="text-slate-600 text-sm" data-i18n="pricing.pro.description">Faol klinikalar uchun</p>
+                    </div>
+                    <div class="mb-8">
+                        <div class="flex items-baseline gap-2">
+                            <span class="text-5xl font-bold text-blue-600">$100</span>
+                            <span class="text-slate-500" data-i18n="pricing.pro.period">/oyiga</span>
+                        </div>
+                    </div>
+                    <ul class="space-y-4 mb-8">
+                        <li class="flex items-start gap-3">
+                            <svg class="w-6 h-6 text-blue-600 flex-shrink-0" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M5 13l4 4L19 7"/>
+                            </svg>
+                            <span class="text-slate-700" data-i18n="pricing.pro.feature1">Qidiruvda top joylashuv</span>
+                        </li>
+                        <li class="flex items-start gap-3">
+                            <svg class="w-6 h-6 text-blue-600 flex-shrink-0" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M5 13l4 4L19 7"/>
+                            </svg>
+                            <span class="text-slate-700" data-i18n="pricing.pro.feature2">Kengayтirilgan klinika profили</span>
+                        </li>
+                        <li class="flex items-start gap-3">
+                            <svg class="w-6 h-6 text-blue-600 flex-shrink-0" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M5 13l4 4L19 7"/>
+                            </svg>
+                            <span class="text-slate-700" data-i18n="pricing.pro.feature3">Analitika va statistика</span>
+                        </li>
+                        <li class="flex items-start gap-3">
+                            <svg class="w-6 h-6 text-blue-600 flex-shrink-0" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M5 13l4 4L19 7"/>
+                            </svg>
+                            <span class="text-slate-700" data-i18n="pricing.pro.feature4">Uстувор qо'llаб-quvvатlash</span>
+                        </li>
+                        <li class="flex items-start gap-3">
+                            <svg class="w-6 h-6 text-blue-600 flex-shrink-0" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M5 13l4 4L19 7"/>
+                            </svg>
+                            <span class="text-slate-700" data-i18n="pricing.pro.feature5">Kо'проq bemорlar qамрови</span>
+                        </li>
+                    </ul>
+                    <button onclick="openRegistrationModal()" class="w-full bg-gradient-to-r from-blue-600 to-cyan-500 text-white py-4 rounded-full font-semibold hover:shadow-xl transition-all" data-i18n="pricing.pro.cta">
+                        Pro ni tanlash
+                    </button>
+                </div>
+            </div>
+
+            <div class="text-center mt-12">
+                <p class="text-slate-600" data-i18n="pricing.note">Barcha narxlar AQSH dollarida ko'rsатилgan. To'lov oylik.</p>
+            </div>
+        </div>
+    </section>
+
+    <!-- Benefits Section -->
+    <section class="py-20 md:py-32 px-6 md:px-12 bg-white" id="benefits">
+        <div class="max-w-[1400px] mx-auto">
+            <div class="text-center mb-16 animate-clip-in">
+                <h2 class="text-4xl md:text-5xl font-bold tracking-tight mb-6" data-i18n="benefits.title">Hamma uchун afzalliklar</h2>
+                <p class="text-xl text-slate-600 max-w-3xl mx-auto" data-i18n="benefits.subtitle">ShifoYo'l bemорlar va klinikalar uchун qiymат yaratadi</p>
+            </div>
+
+            <div class="grid lg:grid-cols-2 gap-12">
+                <!-- For Users -->
+                <div class="bg-gradient-to-br from-blue-50 to-cyan-50 p-10 rounded-[40px] border border-blue-100 animate-clip-in" style="animation-delay: 0.1s">
+                    <div class="w-16 h-16 bg-blue-600 rounded-2xl flex items-center justify-center mb-6">
+                        <svg class="w-8 h-8 text-white" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M16 7a4 4 0 11-8 0 4 4 0 018 0zM12 14a7 7 0 00-7 7h14a7 7 0 00-7-7z"/>
+                        </svg>
+                    </div>
+                    <h3 class="text-3xl font-bold mb-6" data-i18n="benefits.users.title">Для пациентов</h3>
+                    <ul class="space-y-4">
+                        <li class="flex items-start gap-3">
+                            <svg class="w-6 h-6 text-blue-600 flex-shrink-0 mt-1" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 12l2 2 4-4m5.618-4.016A11.955 11.955 0 0112 2.944a11.955 11.955 0 01-8.618 3.04A12.02 12.02 0 003 9c0 5.591 3.824 10.29 9 11.622 5.176-1.332 9-6.03 9-11.622 0-1.042-.133-2.052-.382-3.016z"/>
+                            </svg>
+                            <div>
+                                <h4 class="font-semibold text-lg mb-1" data-i18n="benefits.users.item1.title">Лучшее управление здоровьем</h4>
+                                <p class="text-slate-600" data-i18n="benefits.users.item1.description">Не забывайте о лекарствах и визитах к врачу</p>
+                            </div>
+                        </li>
+                        <li class="flex items-start gap-3">
+                            <svg class="w-6 h-6 text-blue-600 flex-shrink-0 mt-1" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 12l2 2 4-4m5.618-4.016A11.955 11.955 0 0112 2.944a11.955 11.955 0 01-8.618 3.04A12.02 12.02 0 003 9c0 5.591 3.824 10.29 9 11.622 5.176-1.332 9-6.03 9-11.622 0-1.042-.133-2.052-.382-3.016z"/>
+                            </svg>
+                            <div>
+                                <h4 class="font-semibold text-lg mb-1" data-i18n="benefits.users.item2.title">Экономия времени</h4>
+                                <p class="text-slate-600" data-i18n="benefits.users.item2.description">Записывайтесь онлайн без звонков и очередей</p>
+                            </div>
+                        </li>
+                        <li class="flex items-start gap-3">
+                            <svg class="w-6 h-6 text-blue-600 flex-shrink-0 mt-1" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 12l2 2 4-4m6 2a9 9 0 11-18 0 9 9 0 0118 0z"/>
+                            </svg>
+                            <div>
+                                <h4 class="font-semibold text-lg mb-1" data-i18n="benefits.users.item3.title">Лучший выбор</h4>
+                                <p class="text-slate-600" data-i18n="benefits.users.item3.description">Находите клиники с лучшими ценами и отзывами</p>
+                            </div>
+                        </li>
+                    </ul>
+                </div>
+
+                <!-- For Clinics -->
+                <div class="bg-gradient-to-br from-purple-50 to-pink-50 p-10 rounded-[40px] border border-purple-100 animate-clip-in" style="animation-delay: 0.2s">
+                    <div class="w-16 h-16 bg-purple-600 rounded-2xl flex items-center justify-center mb-6">
+                        <svg class="w-8 h-8 text-white" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M19 21V5a2 2 0 00-2-2H7a2 2 0 00-2 2v16m14 0h2m-2 0h-5m-9 0H3m2 0h5M9 7h1m-1 4h1m4-4h1m-1 4h1m-5 10v-5a1 1 0 011-1h2a1 1 0 011 1v5m-4 0h4"/>
+                        </svg>
+                    </div>
+                    <h3 class="text-3xl font-bold mb-6" data-i18n="benefits.clinics.title">Для клиник</h3>
+                    <ul class="space-y-4">
+                        <li class="flex items-start gap-3">
+                            <svg class="w-6 h-6 text-purple-600 flex-shrink-0 mt-1" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 12l2 2 4-4m5.618-4.016A11.955 11.955 0 0112 2.944a11.955 11.955 0 01-8.618 3.04A12.02 12.02 0 003 9c0 5.591 3.824 10.29 9 11.622 5.176-1.332 9-6.03 9-11.622 0-1.042-.133-2.052-.382-3.016z"/>
+                            </svg>
+                            <div>
+                                <h4 class="font-semibold text-lg mb-1" data-i18n="benefits.clinics.item1.title">Больше пациентов</h4>
+                                <p class="text-slate-600" data-i18n="benefits.clinics.item1.description">Привлекайте новых клиентов через платформу</p>
+                            </div>
+                        </li>
+                        <li class="flex items-start gap-3">
+                            <svg class="w-6 h-6 text-purple-600 flex-shrink-0 mt-1" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 12l2 2 4-4m5.618-4.016A11.955 11.955 0 0112 2.944a11.955 11.955 0 01-8.618 3.04A12.02 12.02 0 003 9c0 5.591 3.824 10.29 9 11.622 5.176-1.332 9-6.03 9-11.622 0-1.042-.133-2.052-.382-3.016z"/>
+                            </svg>
+                            <div>
+                                <h4 class="font-semibold text-lg mb-1" data-i18n="benefits.clinics.item2.title">Raqамли mavjudлик</h4>
+                                <p class="text-slate-600" data-i18n="benefits.clinics.item2.description">Onlayна professional profil</p>
+                            </div>
+                        </li>
+                        <li class="flex items-start gap-3">
+                            <svg class="w-6 h-6 text-purple-600 flex-shrink-0 mt-1" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 12l2 2 4-4m5.618-4.016A11.955 11.955 0 0112 2.944a11.955 11.955 0 01-8.618 3.04A12.02 12.02 0 003 9c0 5.591 3.824 10.29 9 11.622 5.176-1.332 9-6.03 9-11.622 0-1.042-.133-2.052-.382-3.016z"/>
+                            </svg>
+                            <div>
+                                <h4 class="font-semibold text-lg mb-1" data-i18n="benefits.clinics.item3.title">Удобное управление</h4>
+                                <p class="text-slate-600" data-i18n="benefits.clinics.item3.description">Автоматизация записи и аналитика</p>
+                            </div>
+                        </li>
+                    </ul>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- User Roles & Features Section -->
+    <section class="py-20 md:py-32 px-6 md:px-12 bg-gradient-to-br from-slate-50 to-blue-50">
+        <div class="max-w-[1400px] mx-auto">
+            <div class="text-center mb-16 animate-clip-in">
+                <h2 class="text-4xl md:text-5xl font-bold tracking-tight mb-6" data-i18n="roles.title">Foyдalanувчilar va имконiyатlar</h2>
+                <p class="text-xl text-slate-600 max-w-3xl mx-auto" data-i18n="roles.subtitle">Platformadagi har bir рол uchн maxсус имконiyатлар</p>
+            </div>
+
+            <div class="grid lg:grid-cols-2 gap-8 mb-12">
+                <!-- For Patients - FREE -->
+                <div class="bg-white p-10 rounded-[40px] border-2 border-green-200 shadow-xl animate-clip-in relative" style="animation-delay: 0.1s">
+                    <div class="absolute -top-4 left-8 bg-gradient-to-r from-green-500 to-emerald-500 text-white px-6 py-2 rounded-full text-xs font-bold uppercase tracking-wider">
+                        <span data-i18n="roles.patients.badge">BEPUL</span>
+                    </div>
+                    
+                    <div class="flex items-center gap-4 mb-8 mt-4">
+                        <div class="w-16 h-16 bg-gradient-to-br from-green-500 to-emerald-500 rounded-2xl flex items-center justify-center">
+                            <svg class="w-8 h-8 text-white" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M16 7a4 4 0 11-8 0 4 4 0 018 0zM12 14a7 7 0 00-7 7h14a7 7 0 00-7-7z"/>
+                            </svg>
+                        </div>
+                        <div>
+                            <h3 class="text-3xl font-bold text-slate-900" data-i18n="roles.patients.title">Bemорlar uchун</h3>
+                            <p class="text-slate-600" data-i18n="roles.patients.subtitle">Barchа funksiyalar bepул</p>
+                        </div>
+                    </div>
+
+                    <ul class="space-y-4">
+                        <li class="flex items-start gap-3">
+                            <div class="w-6 h-6 bg-green-100 rounded-lg flex items-center justify-center flex-shrink-0 mt-1">
+                                <svg class="w-4 h-4 text-green-600" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                                    <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M5 13l4 4L19 7"/>
+                                </svg>
+                            </div>
+                            <div>
+                                <h4 class="font-semibold text-lg mb-1" data-i18n="roles.patients.feature1.title">Kirish / Ro'yxатдан o'tish</h4>
+                                <p class="text-slate-600 text-sm" data-i18n="roles.patients.feature1.description">Login yoki Register orqали platformaga kirish</p>
+                            </div>
+                        </li>
+                        
+                        <li class="flex items-start gap-3">
+                            <div class="w-6 h-6 bg-green-100 rounded-lg flex items-center justify-center flex-shrink-0 mt-1">
+                                <svg class="w-4 h-4 text-green-600" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                                    <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M5 13l4 4L19 7"/>
+                                </svg>
+                            </div>
+                            <div>
+                                <h4 class="font-semibold text-lg mb-1" data-i18n="roles.patients.feature2.title">Klinikalar va xizmatlarni qidirish</h4>
+                                <p class="text-slate-600 text-sm" data-i18n="roles.patients.feature2.description">Filtrlar bilан eng mos klinikalarni toping</p>
+                            </div>
+                        </li>
+                        
+                        <li class="flex items-start gap-3">
+                            <div class="w-6 h-6 bg-green-100 rounded-lg flex items-center justify-center flex-shrink-0 mt-1">
+                                <svg class="w-4 h-4 text-green-600" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                                    <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M5 13l4 4L19 7"/>
+                                </svg>
+                            </div>
+                            <div>
+                                <h4 class="font-semibold text-lg mb-1" data-i18n="roles.patients.feature3.title">Qabulga yozilish</h4>
+                                <p class="text-slate-600 text-sm" data-i18n="roles.patients.feature3.description">Onlayn shifokorga yozilish tizimi</p>
+                            </div>
+                        </li>
+                        
+                        <li class="flex items-start gap-3">
+                            <div class="w-6 h-6 bg-green-100 rounded-lg flex items-center justify-center flex-shrink-0 mt-1">
+                                <svg class="w-4 h-4 text-green-600" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                                    <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M5 13l4 4L19 7"/>
+                                </svg>
+                            </div>
+                            <div>
+                                <h4 class="font-semibold text-lg mb-1" data-i18n="roles.patients.feature4.title">Sharhlar va baholash</h4>
+                                <p class="text-slate-600 text-sm" data-i18n="roles.patients.feature4.description">Klinikalar va xizmatlarni baholash</p>
+                            </div>
+                        </li>
+                        
+                        <li class="flex items-start gap-3">
+                            <div class="w-6 h-6 bg-green-100 rounded-lg flex items-center justify-center flex-shrink-0 mt-1">
+                                <svg class="w-4 h-4 text-green-600" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                                    <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M5 13l4 4L19 7"/>
+                                </svg>
+                            </div>
+                            <div>
+                                <h4 class="font-semibold text-lg mb-1" data-i18n="roles.patients.feature5.title">Tashriflar tarixи</h4>
+                                <p class="text-slate-600 text-sm" data-i18n="roles.patients.feature5.description">Oxirgi qabullar tarixи (asosiy)</p>
+                            </div>
+                        </li>
+                        
+                        <li class="flex items-start gap-3">
+                            <div class="w-6 h-6 bg-green-100 rounded-lg flex items-center justify-center flex-shrink-0 mt-1">
+                                <svg class="w-4 h-4 text-green-600" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                                    <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M5 13l4 4L19 7"/>
+                                </svg>
+                            </div>
+                            <div>
+                                <h4 class="font-semibold text-lg mb-1" data-i18n="roles.patients.feature6.title">Dori eslatmalari</h4>
+                                <p class="text-slate-600 text-sm" data-i18n="roles.patients.feature6.description">Dori qабул qilish uchун eslatмalar</p>
+                            </div>
+                        </li>
+                    </ul>
+
+                    <div class="mt-8 pt-8 border-t border-slate-200">
+                        <div class="text-center">
+                            <p class="text-2xl font-bold text-green-600 mb-2" data-i18n="roles.patients.price">100% BEPUL</p>
+                            <p class="text-sm text-slate-600" data-i18n="roles.patients.price_note">Bemорlar uchун heч qандай to'лов yo'q</p>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- For Clinics - PAID -->
+                <div class="bg-white p-10 rounded-[40px] border-2 border-blue-200 shadow-xl animate-clip-in">
+                    <div class="flex items-center gap-4 mb-8">
+                        <div class="w-16 h-16 bg-gradient-to-br from-blue-600 to-cyan-500 rounded-2xl flex items-center justify-center">
+                            <svg class="w-8 h-8 text-white" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M19 21V5a2 2 0 00-2-2H7a2 2 0 00-2 2v16m14 0h2m-2 0h-5m-9 0H3m2 0h5M9 7h1m-1 4h1m4-4h1m-1 4h1m-5 10v-5a1 1 0 011-1h2a1 1 0 011 1v5m-4 0h4"/>
+                            </svg>
+                        </div>
+                        <div>
+                            <h3 class="text-3xl font-bold text-slate-900" data-i18n="roles.clinics.title">Klinikalar uchун</h3>
+                            <p class="text-slate-600" data-i18n="roles.clinics.subtitle">2 платных тарифа</p>
+                        </div>
+                    </div>
+
+                    <!-- Starter Plan Features -->
+                    <div class="mb-8 p-6 bg-slate-50 rounded-2xl">
+                        <div class="flex items-center justify-between mb-4">
+                            <h4 class="text-xl font-bold text-slate-900" data-i18n="roles.clinics.starter.name">Starter – $70/мес</h4>
+                        </div>
+                        <ul class="space-y-3">
+                            <li class="flex items-start gap-2 text-sm">
+                                <svg class="w-5 h-5 text-blue-600 flex-shrink-0 mt-0.5" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                                    <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M5 13l4 4L19 7"/>
+                                </svg>
+                                <span data-i18n="roles.clinics.starter.feature1">Klinика ro'yxati va login</span>
+                            </li>
+                            <li class="flex items-start gap-2 text-sm">
+                                <svg class="w-5 h-5 text-blue-600 flex-shrink-0 mt-0.5" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                                    <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M5 13l4 4L19 7"/>
+                                </svg>
+                                <span data-i18n="roles.clinics.starter.feature2">Приём записей пациентов</span>
+                            </li>
+                            <li class="flex items-start gap-2 text-sm">
+                                <svg class="w-5 h-5 text-blue-600 flex-shrink-0 mt-0.5" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                                    <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M5 13l4 4L19 7"/>
+                                </svg>
+                                <span data-i18n="roles.clinics.starter.feature3">До 5 услуг</span>
+                            </li>
+                            <li class="flex items-start gap-2 text-sm">
+                                <svg class="w-5 h-5 text-blue-600 flex-shrink-0 mt-0.5" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                                    <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M5 13l4 4L19 7"/>
+                                </svg>
+                                <span data-i18n="roles.clinics.starter.feature4">1 филиал</span>
+                            </li>
+                            <li class="flex items-start gap-2 text-sm">
+                                <svg class="w-5 h-5 text-blue-600 flex-shrink-0 mt-0.5" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                                    <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M5 13l4 4L19 7"/>
+                                </svg>
+                                <span data-i18n="roles.clinics.starter.feature5">1 администратор</span>
+                            </li>
+                            <li class="flex items-start gap-2 text-sm text-red-600">
+                                <svg class="w-5 h-5 flex-shrink-0 mt-0.5" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                                    <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M6 18L18 6M6 6l12 12"/>
+                                </svg>
+                                <span data-i18n="roles.clinics.starter.feature6">Аналитика yo'q</span>
+                            </li>
+                        </ul>
+                    </div>
+
+                    <!-- Pro Plan Features -->
+                    <div class="p-6 bg-gradient-to-br from-blue-50 to-cyan-50 rounded-2xl border-2 border-blue-200">
+                        <div class="flex items-center justify-between mb-4">
+                            <h4 class="text-xl font-bold text-blue-600" data-i18n="roles.clinics.pro.name">Pro – $100/мес</h4>
+                            <span class="bg-blue-600 text-white px-3 py-1 rounded-full text-xs font-bold" data-i18n="roles.clinics.pro.badge">ЛУЧШИЙ ВЫБОР</span>
+                        </div>
+                        <p class="text-sm text-slate-600 mb-4" data-i18n="roles.clinics.pro.subtitle">Starter + все дополнительные возможности:</p>
+                        <ul class="space-y-3">
+                            <li class="flex items-start gap-2 text-sm">
+                                <svg class="w-5 h-5 text-blue-600 flex-shrink-0 mt-0.5" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                                    <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M5 13l4 4L19 7"/>
+                                </svg>
+                                <span data-i18n="roles.clinics.pro.feature1">Высокая позиция в поиске</span>
+                            </li>
+                            <li class="flex items-start gap-2 text-sm">
+                                <svg class="w-5 h-5 text-blue-600 flex-shrink-0 mt-0.5" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                                    <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M5 13l4 4L19 7"/>
+                                </svg>
+                                <span data-i18n="roles.clinics.pro.feature2">Полная панель аналитики</span>
+                            </li>
+                            <li class="flex items-start gap-2 text-sm">
+                                <svg class="w-5 h-5 text-blue-600 flex-shrink-0 mt-0.5" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                                    <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M5 13l4 4L19 7"/>
+                                </svg>
+                                <span data-i18n="roles.clinics.pro.feature3">Аккаунты врачей</span>
+                            </li>
+                            <li class="flex items-start gap-2 text-sm">
+                                <svg class="w-5 h-5 text-blue-600 flex-shrink-0 mt-0.5" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                                    <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M5 13l4 4L19 7"/>
+                                </svg>
+                                <span data-i18n="roles.clinics.pro.feature4">Возможность выписки рецептов</span>
+                            </li>
+                            <li class="flex items-start gap-2 text-sm">
+                                <svg class="w-5 h-5 text-blue-600 flex-shrink-0 mt-0.5" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                                    <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M5 13l4 4L19 7"/>
+                                </svg>
+                                <span data-i18n="roles.clinics.pro.feature5">Неограниченные филиалы</span>
+                            </li>
+                            <li class="flex items-start gap-2 text-sm">
+                                <svg class="w-5 h-5 text-blue-600 flex-shrink-0 mt-0.5" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                                    <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M5 13l4 4L19 7"/>
+                                </svg>
+                                <span data-i18n="roles.clinics.pro.feature6">До 3 администраторов</span>
+                            </li>
+                        </ul>
+                    </div>
+
+                    <div class="mt-8">
+                        <button onclick="openRegistrationModal()" class="w-full bg-gradient-to-r from-blue-600 to-cyan-500 text-white py-4 rounded-full font-semibold hover:shadow-xl transition-all" data-i18n="roles.clinics.cta">
+                            Klinikani ro'yxатдан o'tкazish
+                        </button>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Additional Info -->
+            <div class="text-center max-w-3xl mx-auto animate-clip-in" style="animation-delay: 0.3s">
+                <div class="bg-white p-8 rounded-3xl shadow-lg border border-blue-100">
+                    <h4 class="text-xl font-bold mb-4" data-i18n="roles.note.title">Muhim eslatma</h4>
+                    <p class="text-slate-600 leading-relaxed" data-i18n="roles.note.description">
+                        Bemорlar uchун barchа funksiyalar doим bepул bo'ladi. Клиники esa ro'yxатдан o'tгandan so'н o'зларга mos tarifni tanlashlari kerak. Функции автоматически ограничиваются в зависимости от выбранного тарифа.
+                    </p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- CTA Section -->
+    <section class="py-20 md:py-32 px-6 md:px-12 bg-gradient-to-br from-blue-600 to-cyan-600 text-white rounded-t-[60px] md:rounded-t-[80px]">
+        <div class="max-w-4xl mx-auto text-center">
+            <h2 class="text-4xl md:text-5xl lg:text-6xl font-bold mb-6 animate-clip-in" data-i18n="cta.title">Готовы присоединиться к ShifoYo'l?</h2>
+            <p class="text-xl md:text-2xl mb-12 text-white/90 animate-clip-in" style="animation-delay: 0.1s" data-i18n="cta.subtitle">Зарегистрируйте свою клинику или получите ранний доступ к приложению</p>
+            <div class="flex flex-col sm:flex-row gap-4 justify-center animate-clip-in" style="animation-delay: 0.2s">
+                <button onclick="openRegistrationModal()" class="glass-button all-unset cursor-pointer outline-none focus:outline-none z-30 pointer-events-auto text-base rounded-full relative group">
+                    <span class="button-text relative block select-none font-semibold text-lg px-10 py-5 text-white" data-i18n="cta.button1">
+                        Klinikani ro'yxатдан o'тказиш
+                    </span>
+                    <div class="button-shine"></div>
+                </button>
+                <a href="#contact" class="inline-flex items-center justify-center gap-2 bg-white/10 backdrop-blur border-2 border-white/30 px-10 py-5 rounded-full text-lg font-semibold hover:bg-white/20 transition-all" data-i18n="cta.button2">
+                    Получить ранний доступ
+                </a>
+            </div>
+        </div>
+    </section>
+
+    <!-- Contact Section -->
+    <section class="py-20 md:py-32 px-6 md:px-12 bg-white" id="contact">
+        <div class="max-w-4xl mx-auto">
+            <div class="text-center mb-16 animate-clip-in">
+                <h2 class="text-4xl md:text-5xl font-bold tracking-tight mb-6" data-i18n="contact.title">Biz bilan bog'ланING</h2>
+                <p class="text-xl text-slate-600" data-i18n="contact.subtitle">Есть вопросы? Мы рады помочь</p>
+            </div>
+
+            <div class="grid md:grid-cols-2 gap-12">
+                <!-- Contact Info -->
+                <div class="space-y-8 animate-clip-in" style="animation-delay: 0.1s">
+                    <div>
+                        <h3 class="text-2xl font-bold mb-6" data-i18n="contact.info.title">Aloqa ma'lumотлари</h3>
+                        <div class="space-y-4">
+                            <div class="flex items-start gap-4">
+                                <div class="w-12 h-12 bg-blue-100 rounded-xl flex items-center justify-center flex-shrink-0">
+                                    <svg class="w-6 h-6 text-blue-600" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                                        <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M3 8l7.89 5.26a2 2 0 002.22 0L21 8M5 19h14a2 2 0 002-2V7a2 2 0 00-2-2H5a2 2 0 00-2 2v12a2 2 0 002 2z"/>
+                                    </svg>
+                                </div>
+                                <div>
+                                    <p class="font-semibold mb-1" data-i18n="contact.info.email.label">Email</p>
+                                    <a href="mailto:shifo.yol@gmail.com" class="text-blue-600 hover:underline">shifo.yol@gmail.com</a>
+                                </div>
+                            </div>
+                            <div class="flex items-start gap-4">
+                                <div class="w-12 h-12 bg-gradient-to-br from-purple-500 to-pink-500 rounded-xl flex items-center justify-center flex-shrink-0">
+                                    <svg class="w-6 h-6 text-white" fill="currentColor" viewBox="0 0 24 24">
+                                        <path d="M12 0C8.74 0 8.333.015 7.053.072 5.775.132 4.905.333 4.14.63c-.789.306-1.459.717-2.126 1.384S.935 3.35.63 4.14C.333 4.905.131 5.775.072 7.053.012 8.333 0 8.74 0 12s.015 3.667.072 4.947c.06 1.277.261 2.148.558 2.913.306.788.717 1.459 1.384 2.126.667.666 1.336 1.079 2.126 1.384.766.296 1.636.499 2.913.558C8.333 23.988 8.74 24 12 24s3.667-.015 4.947-.072c1.277-.06 2.148-.262 2.913-.558.788-.306 1.459-.718 2.126-1.384.666-.667 1.079-1.335 1.384-2.126.296-.765.499-1.636.558-2.913.06-1.28.072-1.687.072-4.947s-.015-3.667-.072-4.947c-.06-1.277-.262-2.149-.558-2.913-.306-.789-.718-1.459-1.384-2.126C21.319 1.347 20.651.935 19.86.63c-.765-.297-1.636-.499-2.913-.558C15.667.012 15.26 0 12 0zm0 2.16c3.203 0 3.585.016 4.85.071 1.17.055 1.805.249 2.227.415.562.217.96.477 1.382.896.419.42.679.819.896 1.381.164.422.36 1.057.413 2.227.057 1.266.07 1.646.07 4.85s-.015 3.585-.074 4.85c-.061 1.17-.256 1.805-.421 2.227-.224.562-.479.96-.899 1.382-.419.419-.824.679-1.38.896-.42.164-1.065.36-2.235.413-1.274.057-1.649.07-4.859.07-3.211 0-3.586-.015-4.859-.074-1.171-.061-1.816-.256-2.236-.421-.569-.224-.96-.479-1.379-.899-.421-.419-.69-.824-.9-1.38-.165-.42-.359-1.065-.42-2.235-.045-1.26-.061-1.649-.061-4.844 0-3.196.016-3.586.061-4.861.061-1.17.255-1.814.42-2.234.21-.57.479-.96.9-1.381.419-.419.81-.689 1.379-.898.42-.166 1.051-.361 2.221-.421 1.275-.045 1.65-.06 4.859-.06l.045.03zm0 3.678c-3.405 0-6.162 2.76-6.162 6.162 0 3.405 2.76 6.162 6.162 6.162 3.405 0 6.162-2.76 6.162-6.162 0-3.405-2.76-6.162-6.162-6.162zM12 16c-2.21 0-4-1.79-4-4s1.79-4 4-4 4 1.79 4 4-1.79 4-4 4zm7.846-10.405c0 .795-.646 1.44-1.44 1.44-.795 0-1.44-.646-1.44-1.44 0-.794.646-1.439 1.44-1.439.793-.001 1.44.645 1.44 1.439z"/>
+                                    </svg>
+                                </a>
+                                <a href="#" class="w-10 h-10 bg-white/10 rounded-full flex items-center justify-center hover:bg-white/20 transition-colors">
+                                    <svg class="w-5 h-5" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                                        <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M8 7V3m8 4V3m-9 8h10M5 21h14a2 2 0 002-2V7a2 2 0 00-2-2H5a2 2 0 00-2 2v12a2 2 0 002 2z"/>
+                                    </svg>
+                                </a>
+                                <a href="#" class="w-10 h-10 bg-white/10 rounded-full flex items-center justify-center hover:bg-white/20 transition-colors">
+                                    <svg class="w-5 h-5" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                                        <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M19 21V5a2 2 0 00-2-2H7a2 2 0 00-2 2v16m14 0h2m-2 0h-5m-9 0H3m2 0h5M9 7h1m-1 4h1m4-4h1m-1 4h1m-5 10v-5a1 1 0 011-1h2a1 1 0 011 1v5m-4 0h4"/>
+                                    </svg>
+                                </a>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Contact Form -->
+                <div class="animate-clip-in" style="animation-delay: 0.2s">
+                    <form class="space-y-6" onsubmit="handleContactForm(event)">
+                        <div>
+                            <label class="block text-sm font-semibold mb-2" data-i18n="contact.form.name">Ism</label>
+                            <input type="text" required class="w-full px-4 py-3 rounded-xl border border-slate-200 focus:border-blue-500 focus:outline-none transition-colors" placeholder="Ismingiz">
+                        </div>
+                        <div>
+                            <label class="block text-sm font-semibold mb-2" data-i18n="contact.form.email">Email</label>
+                            <input type="email" required class="w-full px-4 py-3 rounded-xl border border-slate-200 focus:border-blue-500 focus:outline-none transition-colors" placeholder="your@email.com">
+                        </div>
+                        <div>
+                            <label class="block text-sm font-semibold mb-2" data-i18n="contact.form.message">Xabar</label>
+                            <textarea rows="4" required class="w-full px-4 py-3 rounded-xl border border-slate-200 focus:border-blue-500 focus:outline-none transition-colors" placeholder="Xabaringiz..."></textarea>
+                        </div>
+                        <button type="submit" class="w-full bg-blue-600 text-white py-4 rounded-full font-semibold hover:bg-blue-700 transition-colors" data-i18n="contact.form.submit">
+                            Xabar yubорish
+                        </button>
+                    </form>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer class="bg-slate-900 text-white py-12 px-6 md:px-12 rounded-t-[60px] md:rounded-t-[80px]">
+        <div class="max-w-[1400px] mx-auto">
+            <!-- Single Row Footer -->
+            <div class="flex flex-col md:flex-row items-center justify-between gap-6 pb-8 border-b border-slate-700">
+                <!-- Logo -->
+                <div class="flex items-center gap-3">
+                    <div class="w-10 h-10 bg-blue-600 rounded-xl flex items-center justify-center">
+                        <svg class="w-6 h-6 text-white" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M12 4.354a4 4 0 110 5.292M15 21H3v-1a6 6 0 0112 0v1zm0 0h6v-1a6 6 0 00-9-5.197M13 7a4 4 0 11-8 0 4 4 0 018 0z"/>
+                        </svg>
+                    </div>
+                    <span class="text-2xl font-bold">ShifoYo'l</span>
+                </div>
+
+                <!-- Links -->
+                <div class="flex flex-wrap items-center justify-center gap-6 text-sm font-medium">
+                    <a href="#features" class="hover:text-cyan-400 transition-colors" data-i18n="footer.features">Imkoniyатlar</a>
+                    <a href="#pricing" class="hover:text-cyan-400 transition-colors" data-i18n="footer.pricing">Nарxlar</a>
+                    <a href="#benefits" class="hover:text-cyan-400 transition-colors" data-i18n="footer.benefits">Afзallиклар</a>
+                    <a href="#contact" class="hover:text-cyan-400 transition-colors" data-i18n="footer.contact">Aloqa</a>
+                </div>
+
+                <!-- Social -->
+                <div class="flex items-center gap-4">
+                    <a href="https://www.instagram.com/shifoyol?igsh=dmRybnI3cGc5d3F6&utm_source=qr" target="_blank" rel="noopener noreferrer" class="w-10 h-10 bg-gradient-to-br from-purple-500 to-pink-500 rounded-full flex items-center justify-center hover:shadow-lg transition-all">
+                        <svg class="w-5 h-5 text-white" fill="currentColor" viewBox="0 0 24 24">
+                            <path d="M12 0C8.74 0 8.333.015 7.053.072 5.775.132 4.905.333 4.14.63c-.789.306-1.459.717-2.126 1.384S.935 3.35.63 4.14C.333 4.905.131 5.775.072 7.053.012 8.333 0 8.74 0 12s.015 3.667.072 4.947c.06 1.277.261 2.148.558 2.913.306.788.717 1.459 1.384 2.126.667.666 1.336 1.079 2.126 1.384.766.296 1.636.499 2.913.558C8.333 23.988 8.74 24 12 24s3.667-.015 4.947-.072c1.277-.06 2.148-.262 2.913-.558.788-.306 1.459-.718 2.126-1.384.666-.667 1.079-1.335 1.384-2.126.296-.765.499-1.636.558-2.913.06-1.28.072-1.687.072-4.947s-.015-3.667-.072-4.947c-.06-1.277-.262-2.149-.558-2.913-.306-.789-.718-1.459-1.384-2.126C21.319 1.347 20.651.935 19.86.63c-.765-.297-1.636-.499-2.913-.558C15.667.012 15.26 0 12 0zm0 2.16c3.203 0 3.585.016 4.85.071 1.17.055 1.805.249 2.227.415.562.217.96.477 1.382.896.419.42.679.819.896 1.381.164.422.36 1.057.413 2.227.057 1.266.07 1.646.07 4.85s-.015 3.585-.074 4.85c-.06-1.277-.256 1.805-.421 2.227-.224.562-.479.96-.899 1.382-.419.419-.824.679-1.38.896-.42.164-1.065.36-2.235.413-1.274.057-1.649.07-4.859.07-3.211 0-3.586-.015-4.859-.074-1.171-.061-1.816-.256-2.236-.421-.569-.224-.96-.479-1.379-.899-.421-.419-.69-.824-.9-1.38-.165-.42-.359-1.065-.42-2.235-.045-1.26-.061-1.649-.061-4.844 0-3.196.016-3.586.061-4.861.061-1.17.255-1.814.42-2.234.21-.57.479-.96.9-1.381.419-.419.81-.689 1.379-.898.42-.166 1.051-.361 2.221-.421 1.275-.045 1.65-.06 4.859-.06l.045.03zm0 3.678c-3.405 0-6.162 2.76-6.162 6.162 0 3.405 2.76 6.162 6.162 6.162 3.405 0 6.162-2.76 6.162-6.162 0-3.405-2.76-6.162-6.162-6.162zM12 16c-2.21 0-4-1.79-4-4s1.79-4 4-4 4 1.79 4 4-1.79 4-4 4zm7.846-10.405c0 .795-.646 1.44-1.44 1.44-.795 0-1.44-.646-1.44-1.44 0-.794.646-1.439 1.44-1.439.793-.001 1.44.645 1.44 1.439z"/>
+                        </svg>
+                    </a>
+                    <a href="#" class="w-10 h-10 bg-white/10 rounded-full flex items-center justify-center hover:bg-white/20 transition-colors">
+                        <svg class="w-5 h-5" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M8 7V3m8 4V3m-9 8h10M5 21h14a2 2 0 002-2V7a2 2 0 00-2-2H5a2 2 0 00-2 2v12a2 2 0 002 2z"/>
+                        </svg>
+                    </a>
+                    <a href="#" class="w-10 h-10 bg-white/10 rounded-full flex items-center justify-center hover:bg-white/20 transition-colors">
+                        <svg class="w-5 h-5" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M19 21V5a2 2 0 00-2-2H7a2 2 0 00-2 2v16m14 0h2m-2 0h-5m-9 0H3m2 0h5M9 7h1m-1 4h1m4-4h1m-1 4h1m-5 10v-5a1 1 0 011-1h2a1 1 0 011 1v5m-4 0h4"/>
+                        </svg>
+                    </a>
+                </div>
+            </div>
+
+            <!-- Bottom Row -->
+            <div class="flex flex-col md:flex-row items-center justify-between gap-4 pt-8 text-sm text-slate-400">
+                <p>&copy; 2026 ShifoYo'l. <span data-i18n="footer.rights">Barchа huquqlar himoyalangan.</span></p>
+                <div class="flex items-center gap-6">
+                    <a href="#" class="hover:text-white transition-colors" data-i18n="footer.privacy">Maxfiylik siyосати</a>
+                    <a href="#" class="hover:text-white transition-colors" data-i18n="footer.terms">Foyдalanish шартлари</a>
+                </div>
+            </div>
+
+            <!-- Beta Badge -->
+            <div class="text-center mt-8">
+                <span class="inline-block bg-cyan-500/20 text-cyan-400 px-4 py-2 rounded-full text-xs font-bold uppercase tracking-wider" data-i18n="footer.beta">
+                    Teз orада ishga tushadi — Beta versiya 2026
+                </span>
+            </div>
+        </div>
+    </footer>
+
+    <!-- Clinic Registration Modal -->
+    <div id="registrationModal" class="fixed inset-0 bg-black/50 backdrop-blur-sm z-50 hidden flex items-center justify-center p-4">
+        <div class="bg-white rounded-3xl max-w-md w-full p-8 shadow-2xl transform transition-all">
+            <div class="flex justify-between items-center mb-6">
+                <h3 class="text-2xl font-bold text-slate-900" data-i18n="modal.title">Klinikani ro'yxатдан o'tказиш</h3>
+                <button onclick="closeRegistrationModal()" class="text-slate-400 hover:text-slate-600 transition-colors">
+                    <svg class="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                        <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M6 18L18 6M6 6l12 12"/>
+                    </svg>
+                </button>
+            </div>
+            
+            <form id="clinicRegistrationForm" class="space-y-4" onsubmit="handleRegistration(event)">
+                <div>
+                    <label class="block text-sm font-semibold mb-2 text-slate-700" data-i18n="modal.clinic_name">Klinika nomи</label>
+                    <input type="text" id="clinicName" required class="w-full px-4 py-3 rounded-xl border border-slate-200 focus:border-blue-500 focus:ring-2 focus:ring-blue-200 focus:outline-none transition-all" placeholder="Klinika nomi">
+                    <span class="text-red-500 text-xs hidden" id="clinicNameError" data-i18n="modal.error.clinic_name">Klinika nomи кiritилishi шарт</span>
+                </div>
+                
+                <div>
+                    <label class="block text-sm font-semibold mb-2 text-slate-700" data-i18n="modal.login">Login (Email yoki foyдalanувchi nomи)</label>
+                    <input type="text" id="clinicLogin" required class="w-full px-4 py-3 rounded-xl border border-slate-200 focus:border-blue-500 focus:ring-2 focus:ring-blue-200 focus:outline-none transition-all" placeholder="email@example.com">
+                    <span class="text-red-500 text-xs hidden" id="clinicLoginError" data-i18n="modal.error.login">To'г'ри email yoki login kiriting</span>
+                </div>
+                
+                <div>
+                    <label class="block text-sm font-semibold mb-2 text-slate-700" data-i18n="modal.password">Parol</label>
+                    <input type="password" id="clinicPassword" required minlength="8" class="w-full px-4 py-3 rounded-xl border border-slate-200 focus:border-blue-500 focus:ring-2 focus:ring-blue-200 focus:outline-none transition-all" placeholder="********">
+                    <span class="text-red-500 text-xs hidden" id="clinicPasswordError" data-i18n="modal.error.password">Parol kamida 8 ta belgidан ibорат bo'lishи kerak</span>
+                </div>
+                
+                <div class="pt-4">
+                    <button type="submit" class="w-full bg-gradient-to-r from-blue-600 to-cyan-500 text-white py-4 rounded-full font-semibold hover:shadow-xl transition-all" data-i18n="modal.submit">
+                        Ro'yxатдан o'тish
+                    </button>
+                </div>
+            </form>
+            
+            <div id="successMessage" class="hidden mt-6 p-4 bg-green-50 border border-green-200 rounded-2xl">
+                <div class="flex items-center gap-3">
+                    <svg class="w-6 h-6 text-green-600 flex-shrink-0" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                        <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 12l2 2 4-4m6 2a9 9 0 11-18 0 9 9 0 0118 0z"/>
+                    </svg>
+                    <p class="text-green-800 font-semibold" data-i18n="modal.success">Ro'yxатдан o'тish muвaffaqийатли yakunlandи!</p>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <!-- Scripts -->
+    <script>
+        // Spotlight Effect
+        function handleSpotlight(e) {
+            const rect = e.currentTarget.getBoundingClientRect();
+            const x = e.clientX - rect.left;
+            const y = e.clientY - rect.top;
+            e.currentTarget.style.setProperty('--mouse-x', `${x}px`);
+            e.currentTarget.style.setProperty('--mouse-y', `${y}px`);
+        }
+
+        // Sticky Navigation
+        const navbar = document.getElementById('navbar');
+        let lastScroll = 0;
+
+        window.addEventListener('scroll', () => {
+            const currentScroll = window.pageYOffset;
+            
+            if (currentScroll > 100) {
+                navbar.classList.add('bg-white/95', 'backdrop-blur-sm', 'shadow-sm');
+            } else {
+                navbar.classList.remove('bg-white/95', 'backdrop-blur-sm', 'shadow-sm');
+            }
+            
+            lastScroll = currentScroll;
+        });
+
+        // Registration Modal Functions
+        function openRegistrationModal() {
+            document.getElementById('registrationModal').classList.remove('hidden');
+            document.getElementById('registrationModal').classList.add('flex');
+            document.body.style.overflow = 'hidden';
+        }
+
+        function closeRegistrationModal() {
+            document.getElementById('registrationModal').classList.add('hidden');
+            document.getElementById('registrationModal').classList.remove('flex');
+            document.body.style.overflow = 'auto';
+            
+            // Reset form
+            document.getElementById('clinicRegistrationForm').reset();
+            document.getElementById('successMessage').classList.add('hidden');
+            hideAllErrors();
+        }
+
+        function hideAllErrors() {
+            document.getElementById('clinicNameError').classList.add('hidden');
+            document.getElementById('clinicLoginError').classList.add('hidden');
+            document.getElementById('clinicPasswordError').classList.add('hidden');
+        }
+
+        function handleRegistration(event) {
+            event.preventDefault();
+            hideAllErrors();
+            
+            const clinicName = document.getElementById('clinicName').value.trim();
+            const clinicLogin = document.getElementById('clinicLogin').value.trim();
+            const clinicPassword = document.getElementById('clinicPassword').value;
+            
+            let isValid = true;
+            
+            // Validate Clinic Name
+            if (clinicName.length < 3) {
+                document.getElementById('clinicNameError').classList.remove('hidden');
+                isValid = false;
+            }
+            
+            // Validate Login (basic email or username validation)
+            const emailRegex = /^[^\s@]+@[^\s@]+\.[^\s@]+$/;
+            if (clinicLogin.length < 3 && !emailRegex.test(clinicLogin)) {
+                document.getElementById('clinicLoginError').classList.remove('hidden');
+                isValid = false;
+            }
+            
+            // Validate Password
+            if (clinicPassword.length < 8) {
+                document.getElementById('clinicPasswordError').classList.remove('hidden');
+                isValid = false;
+            }
+            
+            if (isValid) {
+                // Show success message
+                document.getElementById('successMessage').classList.remove('hidden');
+                
+                // In real implementation, send data to backend
+                console.log('Registration Data:', {
+                    clinicName,
+                    clinicLogin,
+                    clinicPassword: '***hidden***'
+                });
+                
+                // Auto close after 3 seconds
+                setTimeout(() => {
+                    closeRegistrationModal();
+                }, 3000);
+            }
+        }
+
+        // Contact Form Handler
+        function handleContactForm(event) {
+            event.preventDefault();
+            alert('Xabaringiz uchун rahмат! Teз orада sizга javob berамиз.');
+            event.target.reset();
+        }
+
+        // Close modal on outside click
+        document.getElementById('registrationModal').addEventListener('click', function(event) {
+            if (event.target === this) {
+                closeRegistrationModal();
+            }
+        });
+
+        // Language Switcher with Enhanced Translations
+        const translations = {
+            uz: {
+                // Navigation
+                'nav.features': "Imkoniyatlar",
+                'nav.pricing': "Narxlar",
+                'nav.benefits': "Afzalliklar",
+                'nav.contact': "Aloqa",
+                'nav.cta': "Klinikani ro'yxatdan o'tкazish",
+                
+                // Hero
+                'hero.title1': "Klinikalar va bemorlarni",
+                'hero.title2': "бог'lovchi zamonaviй",
+                'hero.title3': "tibbiy platforma",
+                'hero.subtitle': "Dori eslatmalари, onlayn yozилish va eng yaqin klinikalarni qидирish — hammasи ShifoYo'lda",
+                'hero.cta.primary': "Klinikani ro'yxатдан o'tкazish",
+                'hero.cta.secondary': "Batafsil",
+                'hero.card.title': "Teз orада ishga tushadi",
+                'hero.card.subtitle': "Beta versiya",
+                'hero.card.feature1': "Dori qабул qилish eslatmalари",
+                'hero.card.feature2': "Klinikалarga onlayн yozилish",
+                'hero.card.feature3': "Aqlli klinikalarni qидирish",
+                
+                // About
+                'about.tagline': "Zamonaviy tibbiy platforma",
+                'about.title': "ShifoYo'l haqida",
+                'about.description1': "ShifoYo'l — bu klinikalar va bemорлarni bog'lovchi zamonaviy tibbiy platforma.",
+                'about.description2': "Клиникам помогает находить новых пациентов, а пациентам — надёжные медицинские услуги.",
+                'about.feature1': "Ishonчли va xавфсиз",
+                'about.feature2': "Teз va qulay",
+                'about.feature3': "Tejamкор narxlar",
+                'about.stat1': "Beta versiya",
+                'about.stat2': "Qo'llаб-quvvатlash",
+                
+                // Problem
+                'problem.title': "Biz hal qиладigan muammolar",
+                'problem.subtitle': "Zamonaviy tibbiyот zamonaviy yechimларни talab qилadi",
+                'problem.item1.title': "Dori qабул qилishни unutадilar",
+                'problem.item1.description': "Bemorlar preparatlarni qабул qилishни o'tкazib yubорадilar, bu davolanish samарadorligini pasayтiradi",
+                'problem.item2.title': "Klinika topish qийин",
+                'problem.item2.description': "Ishончли va arzon klinika topish ko'п vaqt va kuch talаб qилadi",
+                'problem.item3.title': "Klinikalar bemorlarni yo'qотadi",
+                'problem.item3.description': "Tibbiy markazlar onlayн mavjud emас va потенциальных bemорлarni yo'qотadi",
+                
+                // Solution
+                'solution.title': "ShifoYo'l bu muammолarnи bir platformada hal qилади",
+                'solution.description': "Biz bemорlar va klinikалarni birlасhtирувchi yagonа ekosитимни yaratдик, tibbiy xizматни hamma uchун qulay va ochiq qиламиз",
+                'solution.benefit1.title': "Bemорlar uchун",
+                'solution.benefit1.description': "Eslatмalar, yozилish va klinikалarni qидирish bir ilовада",
+                'solution.benefit2.title': "Klinikалар uchун",
+                'solution.benefit2.description': "Raqамли mavjudлик va yangi bemорлarnи jalб qилish",
+                
+                // Features
+                'features.title': "Platforma imkoniyatlari",
+                'features.subtitle': "Sog'likni boshqарish uchunzarur bo'lgан hamma narsa bir joyда",
+                'features.item1.title': "Dori eslatmalари",
+                'features.item1.description': "Aqlli bildirishномалар preparatlarni qабул qилishни o'tкazib yubормасликка yordam beradi. Jadval bir marta soзlang va o'з vaqtida eslatмалarni oling.",
+                'features.item1.point1': "Shахсии qабул jadvali",
+                'features.item1.point2': "Telefonga push-bildirishномалар",
+                'features.item1.point3': "Preparatlar qабул tarixи",
+                'features.item2.title': "Klinikага onlayн yozилish",
+                'features.item2.description': "Qo'ng'iroqlар va navbatлarsiz qулай vaқтда шифокорга yozilib oling. Mutахассис, сана va vaqтни to'г'ри-to'г'ри ilovада tanlang.",
+                'features.item2.point1': "Шифокор va vaqтни tanlash",
+                'features.item2.point2': "Yozилishni tasдиqlash",
+                'features.item2.point3': "Tashрифni esлатиш",
+                'features.item3.title': "Aqlli klinikalarni qидирish",
+                'features.item3.description': "Eng yaxshi narxlar va sharhlar bilан eng yaqin klinikalarnи toping. Ixtisoslik, masofа va xizматlar narxi bo'yicha filtrlang.",
+                'features.item3.point1': "Geolокация bo'yicha qидирish",
+                'features.item3.point2': "Nарxlarni solishtirish",
+                'features.item3.point3': "Bemорlar sharhlari",
+                'features.item4.title': "Klinikалар uchун platforma",
+                'features.item4.description': "Tibbiy markazlar uchн yozилishларни бoshқарish, klinika profili va bemорlar analитикаси bilан veb-platformа.",
+                'features.item4.point1': "Jadval бoshқaruви",
+                'features.item4.point2': "Klinika проли",
+                'features.item4.point3': "Statистика va hisobotlar",
+                
+                // Pricing
+                'pricing.title': "Klinikалар uchун tariflar",
+                'pricing.subtitle': "Klinikangizga mos keladigan tarifni tanlang",
+                'pricing.starter.name': "Starter",
+                'pricing.starter.description': "Kichik klinikalar uchун",
+                'pricing.starter.period': "/oyiga",
+                'pricing.starter.feature1': "Platformada klinika проли",
+                'pricing.starter.feature2': "Onlayн yozилish tizimi",
+                'pricing.starter.feature3': "Qidiruvda asosий ko'rinish",
+                'pricing.starter.feature4': "Email orqali qo'llаб-quvvатlash",
+                'pricing.starter.cta': "Tarifni tanlash",
+                'pricing.pro.badge': "Tavsiya etamiz",
+                'pricing.pro.name': "Pro",
+                'pricing.pro.description': "Faol klinikalar uchун",
+                'pricing.pro.period': "/oyiga",
+                'pricing.pro.feature1': "Qidiruvda top joylashuv",
+                'pricing.pro.feature2': "Kengayтirilgan klinika проли",
+                'pricing.pro.feature3': "Analitika va statistика",
+                'pricing.pro.feature4': "Uстувор qо'llаб-quvvатlash",
+                'pricing.pro.feature5': "Kо'проq bemорlar qамрови",
+                'pricing.pro.cta': "Pro ni tanlash",
+                'pricing.note': "Barcha narxlar AQSH dollarida ko'rsатилgan. To'lov oylik.",
+                
+                // User Roles
+                'roles.title': "Foyдalanувчilar va имконiyатlar",
+                'roles.subtitle': "Platformadagi har bir рол uchн maxсус имконiyатлар",
+                'roles.patients.badge': "BEPUL",
+                'roles.patients.title': "Bemорlar uчун",
+                'roles.patients.subtitle': "Barchа funksiyalar bepул",
+                'roles.patients.feature1.title': "Kirish / Ro'yxатдан o'tish",
+                'roles.patients.feature1.description': "Login yoki Register orqали platformaga kirish",
+                'roles.patients.feature2.title': "Klinikalar va xizматлarnи qидирish",
+                'roles.patients.feature2.description': "Найдите подходящие клиники с помощью фильтров",
+                'roles.patients.feature3.title': "Qabulga yozilish",
+                'roles.patients.feature3.description': "Онлайн-система записи к врачу",
+                'roles.patients.feature4.title': "Отзывы и рейтинги",
+                'roles.patients.feature4.description': "Оценивайте клиники и услуги",
+                'roles.patients.feature5.title': "История визитов",
+                'roles.patients.feature5.description': "История последних приёмов (базовая)",
+                'roles.patients.feature6.title': "Напоминания о лекарствах",
+                'roles.patients.feature6.description': "Напоминания для приёма лекарств",
+                'roles.patients.price': "100% BEPUL",
+                'roles.patients.price_note': "Bemорlar uчун heч qандай to'лов yo'q",
+                'roles.clinics.title': "Klinikалар uчун",
+                'roles.clinics.subtitle': "2 платных тарифа",
+                'roles.clinics.starter.name': "Starter – $70/мес",
+                'roles.clinics.starter.feature1': "Klinika ro'yxati va login",
+                'roles.clinics.starter.feature2': "Приём записей пациентов",
+                'roles.clinics.starter.feature3': "До 5 услуг",
+                'roles.clinics.starter.feature4': "1 филиал",
+                'roles.clinics.starter.feature5': "1 администратор",
+                'roles.clinics.starter.feature6': "Аналитика yo'q",
+                'roles.clinics.pro.name': "Pro – $100/мес",
+                'roles.clinics.pro.badge': "ЛУЧШИЙ ВЫБОР",
+                'roles.clinics.pro.subtitle': "Starter + все дополнительные возможности:",
+                'roles.clinics.pro.feature1': "Высокая позиция в поиске",
+                'roles.clinics.pro.feature2': "Полная панель аналитики",
+                'roles.clinics.pro.feature3': "Аккаунты врачей",
+                'roles.clinics.pro.feature4': "Возможность выписки рецептов",
+                'roles.clinics.pro.feature5': "Неограниченные филиалы",
+                'roles.clinics.pro.feature6': "До 3 администраторов",
+                'roles.clinics.cta': "Зарегистрировать клинику",
+                'roles.note.title': "Важное примечание",
+                'roles.note.description': "Все функции для пациентов всегда будут бесплатными. Клиники должны выбрать подходящий тариф после регистрации. Функции автоматически ограничиваются в зависимости от выбранного тарифа.",
+                
+                // Benefits
+                'benefits.title': "Hamma uчун afzalliklar",
+                'benefits.subtitle': "ShifoYo'l bemорlar va klinikалар uчун qiymат yaratadi",
+                'benefits.users.title': "Bemорlar uчун",
+                'benefits.users.item1.title': "Sog'likni yaxши boshqарish",
+                'benefits.users.item1.description': "Dorilar va шифокор ташрифлари haqida unutmang",
+                'benefits.users.item2.title': "Vaqtni tejash",
+                'benefits.users.item2.description': "Qo'ng'iroqlар va navbatлarsiz onlayн yozilib oling",
+                'benefits.users.item3.title': "Yaxшiroq tanlov",
+                'benefits.users.item3.description': "Eng yaxshi narxlar va sharhlar bilан klinikалarnи toping",
+                'benefits.clinics.title': "Klinikалар uчун",
+                'benefits.clinics.item1.title': "Больше пациентов",
+                'benefits.clinics.item1.description': "Привлекайте новых клиентов через платформу",
+                'benefits.clinics.item2.title': "Цифровое присутствие",
+                'benefits.clinics.item2.description': "Onlayнда professional profil",
+                'benefits.clinics.item3.title': "Удобное управление",
+                'benefits.clinics.item3.description': "Автоматизация записи и аналитика",
+                
+                // CTA
+                'cta.title': "Готовы присоединиться к ShifoYo'l?",
+                'cta.subtitle': "Зарегистрируйте свою клинику или получите ранний доступ к приложению",
+                'cta.button1': "Регистрация клиники",
+                'cta.button2': "Получить ранний доступ",
+                
+                // Contact
+                'contact.title': "Свяжитесь с нами",
+                'contact.subtitle': "Есть вопросы? Мы рады помочь",
+                'contact.info.title': "Контактная информация",
+                'contact.info.email.label': "Email",
+                'contact.info.instagram.label': "Instagram",
+                'contact.info.beta.title': "Бета-версия скоро",
+                'contact.info.beta.description': "Мы готовим запуск тестовой версии приложения для пациентов и веб-платформы для клиник.",
+                'contact.info.beta.status': "Запуск в 2026 году",
+                'contact.form.name': "Имя",
+                'contact.form.email': "Email",
+                'contact.form.message': "Сообщение",
+                'contact.form.submit': "Отправить сообщение",
+                
+                // Modal
+                'modal.title': "Регистрация клиники",
+                'modal.clinic_name': "Название клиники",
+                'modal.login': "Логин (Email или имя пользователя)",
+                'modal.password': "Пароль",
+                'modal.submit': "Зарегистрироваться",
+                'modal.success': "Регистрация успешно завершена!",
+                'modal.error.clinic_name': "Название клиники обязательно",
+                'modal.error.login': "Введите корректный email или логин",
+                'modal.error.password': "Пароль должен содержать минимум 8 символов",
+                
+                // Footer
+                'footer.features': "Возможности",
+                'footer.pricing': "Тарифы",
+                'footer.benefits': "Преимущества",
+                'footer.contact': "Контакты",
+                'footer.rights': "Все права защищены.",
+                'footer.privacy': "Политика конфиденциальности",
+                'footer.terms': "Условия использования",
+                'footer.beta': "Скоро запуск — бета-версия 2026"
+            },
+            ru: {
+                // Navigation
+                'nav.features': "Возможности",
+                'nav.pricing': "Тарифы",
+                'nav.benefits': "Преимущества",
+                'nav.contact': "Контакты",
+                'nav.cta': "Регистрация клиники",
+                
+                // Hero
+                'hero.title1': "Умное управление",
+                'hero.title2': "вашим здоровьем",
+                'hero.title3': "в одной платформе",
+                'hero.subtitle': "Напоминания о лекарствах, онлайн-запись к врачу и поиск ближайших клиник — всё в ShifoYo'l",
+                'hero.cta.primary': "Регистрация клиники",
+                'hero.cta.secondary': "Узнать больше",
+                'hero.card.title': "Скоро запуск",
+                'hero.card.subtitle': "Бета-версия",
+                'hero.card.feature1': "Напоминания о приёме лекарств",
+                'hero.card.feature2': "Онлайн-запись в клиники",
+                'hero.card.feature3': "Умный поиск клиник",
+                
+                // About
+                'about.tagline': "Современная медицинская платформа",
+                'about.title': "О платформе ShifoYo'l",
+                'about.description1': "ShifoYo'l — это современная медицинская платформа, которая соединяет клиники и пациентов.",
+                'about.description2': "Клиникам помогает находить новых пациентов, а пациентам — надёжные медицинские услуги.",
+                'about.feature1': "Надёжно и безопасно",
+                'about.feature2': "Быстро и удобно",
+                'about.feature3': "Доступные цены",
+                'about.stat1': "Бета-версия",
+                'about.stat2': "Поддержка",
+                
+                // Problem
+                'problem.title': "Проблемы, которые мы решаем",
+                'problem.subtitle': "Современная медицина требует современных решений",
+                'problem.item1.title': "Забывают принимать лекарства",
+                'problem.item1.description': "Пациенты пропускают приём препаратов, что снижает эффективность лечения и ухудшает здоровье",
+                'problem.item2.title': "Сложно найти клинику",
+                'problem.item2.description': "Поиск надёжной и доступной клиники занимает много времени и усилий",
+                'problem.item3.title': "Клиники теряют пациентов",
+                'problem.item3.description': "Медицинские центры не имеют онлайн-присутствия и теряют потенциальных пациентов",
+                
+                // Solution
+                'solution.title': "ShifoYo'l решает все эти проблемы в одной платформе",
+                'solution.description': "Мы создали единую экосистему, которая объединяет пациентов и клиники, делая медицинское обслуживание удобным и доступным для всех",
+                'solution.benefit1.title': "Для пациентов",
+                'solution.benefit1.description': "Напоминания, запись и поиск клиник в одном приложении",
+                'solution.benefit2.title': "Для клиник",
+                'solution.benefit2.description': "Цифровое присутствие и привлечение новых пациентов",
+                
+                // Features
+                'features.title': "Возможности платформы",
+                'features.subtitle': "Всё необходимое для управления здоровьем в одном месте",
+                'features.item1.title': "Напоминания о лекарствах",
+                'features.item1.description': "Умные уведомления помогут не пропустить приём препаратов. Настройте расписание один раз и получайте напоминания вовремя.",
+                'features.item1.point1': "Персональное расписание приёма",
+                'features.item1.point2': "Push-уведомления на телефон",
+                'features.item1.point3': "История приёма препаратов",
+                'features.item2.title': "Онлайн-запись в клинику",
+                'features.item2.description': "Записывайтесь к врачу в удобное время без звонков и очередей. Выбирайте специалиста, дату и время прямо в приложении.",
+                'features.item2.point1': "Выбор врача и времени",
+                'features.item2.point2': "Подтверждение записи",
+                'features.item2.point3': "Напоминание о визите",
+                'features.item3.title': "Умный поиск клиник",
+                'features.item3.description': "Находите ближайшие клиники с лучшими ценами и отзывами. Фильтруйте по специализации, расстоянию и стоимости услуг.",
+                'features.item3.point1': "Поиск по геолокации",
+                'features.item3.point2': "Сравнение цен",
+                'features.item3.point3': "Отзывы пациентов",
+                'features.item4.title': "Платформа для клиник",
+                'features.item4.description': "Веб-платформа для медицинских центров с управлением записями, профилем клиники и аналитикой пациентов.",
+                'features.item4.point1': "Управление расписанием",
+                'features.item4.point2': "Профиль клиники",
+                'features.item4.point3': "Статистика и отчёты",
+                
+                // Pricing
+                'pricing.title': "Тарифные планы для клиник",
+                'pricing.subtitle': "Выберите план, который подходит для вашей клиники",
+                'pricing.starter.name': "Starter",
+                'pricing.starter.description': "Для небольших клиник",
+                'pricing.starter.period': "/месяц",
+                'pricing.starter.feature1': "Профиль клиники на платформе",
+                'pricing.starter.feature2': "Система онлайн-записи",
+                'pricing.starter.feature3': "Базовая видимость в поиске",
+                'pricing.starter.feature4': "Поддержка по email",
+                'pricing.starter.cta': "Выбрать план",
+                'pricing.pro.badge': "Рекомендуем",
+                'pricing.pro.name': "Pro",
+                'pricing.pro.description': "Для активных клиник",
+                'pricing.pro.period': "/месяц",
+                'pricing.pro.feature1': "Топ размещение в поиске",
+                'pricing.pro.feature2': "Расширенный профиль клиники",
+                'pricing.pro.feature3': "Аналитика и статистика",
+                'pricing.pro.feature4': "Приоритетная поддержка",
+                'pricing.pro.feature5': "Больше охват пациентов",
+                'pricing.pro.cta': "Выбрать Pro",
+                'pricing.note': "Все цены указаны в долларах США. Оплата ежемесячно.",
+                
+                // User Roles
+                'roles.title': "Пользователи и возможности",
+                'roles.subtitle': "Специальные возможности для каждой роли на платформе",
+                'roles.patients.badge': "БЕСПЛАТНО",
+                'roles.patients.title': "Для пациентов",
+                'roles.patients.subtitle': "Все функции бесплатны",
+                'roles.patients.feature1.title': "Вход / Регистрация",
+                'roles.patients.feature1.description': "Доступ к платформе через Login или Register",
+                'roles.patients.feature2.title': "Поиск клиник и услуг",
+                'roles.patients.feature2.description': "Найдите подходящие клиники с помощью фильтров",
+                'roles.patients.feature3.title': "Запись на приём",
+                'roles.patients.feature3.description': "Онлайн-система записи к врачу",
+                'roles.patients.feature4.title': "Отзывы и рейтинги",
+                'roles.patients.feature4.description': "Оценивайте клиники и услуги",
+                'roles.patients.feature5.title': "История визитов",
+                'roles.patients.feature5.description': "История последних приёмов (базовая)",
+                'roles.patients.feature6.title': "Напоминания о лекарствах",
+                'roles.patients.feature6.description': "Напоминания для приёма лекарств",
+                'roles.patients.price': "100% БЕСПЛАТНО",
+                'roles.patients.price_note': "Никаких платежей для пациентов",
+                'roles.clinics.title': "Для клиник",
+                'roles.clinics.subtitle': "2 платных тарифа",
+                'roles.clinics.starter.name': "Starter – $70/мес",
+                'roles.clinics.starter.feature1': "Регистрация и вход клиники",
+                'roles.clinics.starter.feature2': "Приём записей пациентов",
+                'roles.clinics.starter.feature3': "До 5 услуг",
+                'roles.clinics.starter.feature4': "1 филиал",
+                'roles.clinics.starter.feature5': "1 администратор",
+                'roles.clinics.starter.feature6': "Аналитика yo'q",
+                'roles.clinics.pro.name': "Pro – $100/мес",
+                'roles.clinics.pro.badge': "ЛУЧШИЙ ВЫБОР",
+                'roles.clinics.pro.subtitle': "Starter + все дополнительные возможности:",
+                'roles.clinics.pro.feature1': "Высокая позиция в поиске",
+                'roles.clinics.pro.feature2': "Полная панель аналитики",
+                'roles.clinics.pro.feature3': "Аккаунты врачей",
+                'roles.clinics.pro.feature4': "Возможность выписки рецептов",
+                'roles.clinics.pro.feature5': "Неограниченные филиалы",
+                'roles.clinics.pro.feature6': "До 3 администраторов",
+                'roles.clinics.cta': "Зарегистрировать клинику",
+                'roles.note.title': "Важное примечание",
+                'roles.note.description': "Все функции для пациентов всегда будут бесплатными. Клиники должны выбрать подходящий тариф после регистрации. Функции автоматически ограничиваются в зависимости от выбранного тарифа.",
+                
+                // Benefits
+                'benefits.title': "Преимущества для всех",
+                'benefits.subtitle': "ShifoYo'l создаёт ценность для пациентов и клиник",
+                'benefits.users.title': "Для пациентов",
+                'benefits.users.item1.title': "Лучшее управление здоровьем",
+                'benefits.users.item1.description': "Не забывайте о лекарствах и визитах к врачу",
+                'benefits.users.item2.title': "Экономия времени",
+                'benefits.users.item2.description': "Записывайтесь онлайн без звонков и очередей",
+                'benefits.users.item3.title': "Лучший выбор",
+                'benefits.users.item3.description': "Находите клиники с лучшими ценами и отзывами",
+                'benefits.clinics.title': "Для клиник",
+                'benefits.clinics.item1.title': "Больше пациентов",
+                'benefits.clinics.item1.description': "Привлекайте новых клиентов через платформу",
+                'benefits.clinics.item2.title': "Цифровое присутствие",
+                'benefits.clinics.item2.description': "Профессиональный профиль онлайн",
+                'benefits.clinics.item3.title': "Удобное управление",
+                'benefits.clinics.item3.description': "Автоматизация записи и аналитика",
+                
+                // CTA
+                'cta.title': "Готовы присоединиться к ShifoYo'l?",
+                'cta.subtitle': "Зарегистрируйте свою клинику или получите ранний доступ к приложению",
+                'cta.button1': "Регистрация клиники",
+                'cta.button2': "Получить ранний доступ",
+                
+                // Contact
+                'contact.title': "Свяжитесь с нами",
+                'contact.subtitle': "Есть вопросы? Мы рады помочь",
+                'contact.info.title': "Контактная информация",
+                'contact.info.email.label': "Email",
+                'contact.form.name': "Имя",
+                'contact.form.email': "Email",
+                'contact.form.message': "Сообщение",
+                'contact.form.submit': "Отправить сообщение",
+                
+                // Modal
+                'modal.title': "Регистрация клиники",
+                'modal.clinic_name': "Название клиники",
+                'modal.login': "Логин (Email или имя пользователя)",
+                'modal.password': "Пароль",
+                'modal.submit': "Зарегистрироваться",
+                'modal.success': "Регистрация успешно завершена!",
+                'modal.error.clinic_name': "Название клиники обязательно",
+                'modal.error.login': "Введите корректный email или логин",
+                'modal.error.password': "Пароль должен содержать минимум 8 символов",
+                
+                // Footer
+                'footer.features': "Возможности",
+                'footer.pricing': "Тарифы",
+                'footer.benefits': "Преимущества",
+                'footer.contact': "Контакты",
+                'footer.rights': "Все права защищены.",
+                'footer.privacy': "Политика конфиденциальности",
+                'footer.terms': "Условия использования",
+                'footer.beta': "Скоро запуск — бета-версия 2026"
+            }
+        };
+
+        function switchLanguage(lang) {
+            // Update active button
+            document.querySelectorAll('[data-lang]').forEach(btn => {
+                if (btn.getAttribute('data-lang') === lang) {
+                    btn.classList.add('bg-blue-600', 'text-white');
+                    btn.classList.remove('text-slate-600');
+                } else {
+                    btn.classList.remove('bg-blue-600', 'text-white');
+                    btn.classList.add('text-slate-600');
+                }
+            });
+
+            // Update all translatable elements
+            document.querySelectorAll('[data-i18n]').forEach(el => {
+                const key = el.getAttribute('data-i18n');
+                if (translations[lang] && translations[lang][key]) {
+                    // Handle different element types
+                    if (el.tagName === 'INPUT' && el.placeholder) {
+                        el.placeholder = translations[lang][key];
+                    } else if (el.tagName === 'TEXTAREA' && el.placeholder) {
+                        el.placeholder = translations[lang][key];
+                    } else {
+                        el.textContent = translations[lang][key];
+                    }
+                }
+            });
+
+            // Update HTML lang attribute
+            document.documentElement.lang = lang;
+        }
+
+        // Intersection Observer for animations
+        const observerOptions = {
+            threshold: 0.1,
+            rootMargin: '0px 0px -50px 0px'
+        };
+
+        const observer = new IntersectionObserver((entries) => {
+            entries.forEach(entry => {
+                if (entry.isIntersecting) {
+                    entry.target.classList.add('animate-clip-in');
+                }
+            });
+        }, observerOptions);
+
+        document.querySelectorAll('section > div').forEach(el => {
+            observer.observe(el);
+        });
+    </script>
+</body>
+</html>
