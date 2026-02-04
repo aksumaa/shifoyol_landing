@@ -1,0 +1,285 @@
+{
+    "nav": {
+        "features": "Imkoniyatlar",
+        "pricing": "Narxlar",
+        "benefits": "Afzalliklar",
+        "contact": "Kontaktlar",
+        "cta": "Klinikani ro'yxatdan o'tkazish"
+    },
+    "hero": {
+        "card": {
+            "title": "Tez orada ishga tushadi",
+            "subtitle": "Beta versiya",
+            "feature1": "Dori qabul qilish eslatmalari",
+            "feature2": "Klinikalarga onlayn yozilish",
+            "feature3": "Aqlli klinikalarni qidirish"
+        },
+        "title1": "Klinikalar va bemorlarni",
+        "title2": "bog'lovchi zamonaviy",
+        "title3": "tibbiy platforma",
+        "subtitle": "Dori eslatmalari, onlayn yozilish va eng yaqin klinikalarni qidirish — hammasi ShifoYo'lda",
+        "cta": {
+            "primary": "Klinikani ro'yxatdan o'tkazish",
+            "secondary": "Batafsil"
+        }
+    },
+    "about": {
+        "tagline": "Zamonaviy tibbiy platforma",
+        "feature1": "Ishonchli va xavfsiz",
+        "feature2": "Tez va qulay",
+        "feature3": "Tejamkor narxlar",
+        "title": "ShifoYo'l haqida",
+        "description1": "ShifoYo'l — bu klinikalar va bemorlarni bog'lovchi zamonaviy tibbiy platforma.",
+        "description2": "Klinikalarga yangi bemorlarni topishga, bemorlarga esa ishonchli tibbiy xizmatlarni topishga yordam beradi.",
+        "stat1": "Beta versiya",
+        "stat2": "Qo'llab-quvvatlash"
+    },
+    "problem": {
+        "title": "Biz hal qiladigan muammolar",
+        "subtitle": "Zamonaviy tibbiyot zamonaviy yechimlarni talab qiladi",
+        "item1": {
+            "title": "Dorilarni qabul qilishni unutishadi",
+            "description": "Bemorlar dori-darmonlarni o'z vaqtida qabul qilmasliklari davolanish samaradorligini pasaytiradi va sog'liqni yomonlashtiradi."
+        },
+        "item2": {
+            "title": "Klinika topish qiyin",
+            "description": "Ishonchli va hamyonbop klinika topish ko'p vaqt va kuch talab etadi."
+        },
+        "item3": {
+            "title": "Klinikalar bemorlarni yo'qotmoqda",
+            "description": "Tibbiyot markazlari onlayn ko'rinishga ega emas va potentsial bemorlarni yo'qotmoqda."
+        }
+    },
+    "solution": {
+        "title": "ShifoYo'l bu muammolarning barchasini bir platformada hal qiladi",
+        "description": "Biz bemorlar va klinikalarni birlashtiradigan yagona ekotizim yaratdik, bu tibbiy xizmatni hamma uchun qulay va ochiq qiladi",
+        "benefit1": {
+            "title": "Bemorlar uchun",
+            "description": "Eslatmalar, uchrashuvlar va klinikalarni qidirish bitta ilovada"
+        },
+        "benefit2": {
+            "title": "Klinikalar uchun",
+            "description": "Raqamli mavjudlik va yangi bemorlarni jalb qilish"
+        }
+    },
+    "features": {
+        "title": "Platforma imkoniyatlari",
+        "subtitle": "Salomatlikni boshqarish uchun zarur bo'lgan hamma narsa bir joyda",
+        "item1": {
+            "title": "Dori-darmonlar haqida eslatmalar",
+            "description": "Aqlli bildirishnomalar dori-darmonlarni o'tkazib yubormaslikka yordam beradi. Jadvalni bir marta sozlang va o'z vaqtida eslatmalarni oling.",
+            "point1": "Shaxsiy qabul qilish jadvali",
+            "point2": "Telefonga push-bildirishnomalar",
+            "point3": "Dori-darmonlarni qabul qilish tarixi"
+        },
+        "item2": {
+            "title": "Klinikaga onlayn yozilish",
+            "description": "Qo'ng'iroqlar va navbatlarsiz o'zingizga qulay vaqtda shifokor qabuliga yoziling. Mutaxassisni, sanani va vaqtni to'g'ridan-to'g'ri ilovada tanlang.",
+            "point1": "Shifokor va vaqtni tanlash",
+            "point2": "Qabulni tasdiqlash",
+            "point3": "Tashrif haqida eslatma"
+        },
+        "item3": {
+            "title": "Aqlli klinika qidiruvi",
+            "description": "Eng yaxshi narxlar va sharhlar bilan eng yaqin klinikalarni toping. Mutaxassislik, masofa va xizmatlar narxi bo'yicha filtrlang.",
+            "point1": "Geolokatsiya bo'yicha qidiruv",
+            "point2": "Narxlarni taqqoslash",
+            "point3": "Bemorlarning sharhlari"
+        },
+        "item4": {
+            "title": "Klinika uchun veb-sayt",
+            "description": "Har bir klinika o'z xizmatlari, shifokorlari va aloqa ma'lumotlari bilan shaxsiy sahifasini oladi. Bu sizning onlayn ko'rinishingiz va bemorlar uchun qulaylikdir.",
+            "point1": "Shaxsiy sahifa",
+            "point2": "Xizmatlar tavsifi",
+            "point3": "Onlayn yozilish imkoniyati"
+        }
+    },
+    "pricing": {
+        "title": "Klinikalar uchun tariflar",
+        "subtitle": "Klinikangizga mos keladigan tarifni tanlang",
+        "starter": {
+            "name": "Starter",
+            "description": "Kichik klinikalar uchun",
+            "period": "/oyiga",
+            "feature1": "Platformada klinika profili",
+            "feature2": "Onlayn yozilish tizimi",
+            "feature3": "Qidiruvda asosiy ko'rinish",
+            "feature4": "Email orqali qo'llab-quvvatlash",
+            "cta": "Tarifni tanlash"
+        },
+        "pro": {
+            "name": "Pro",
+            "description": "Faol klinikalar uchun",
+            "period": "/oyiga",
+            "badge": "Tavsiya etamiz",
+            "feature1": "Qidiruvda top joylashuv",
+            "feature2": "Kengaytirilgan klinika profili",
+            "feature3": "Analitika va statistika",
+            "feature4": "Ustuvor qo'llab-quvvatlash",
+            "feature5": "Ko'proq bemorlar qamrovi",
+            "cta": "Pro ni tanlash"
+        },
+        "note": "Barcha narxlar AQSH dollarida ko'rsatilgan. To'lov oylik."
+    },
+    "roles": {
+        "title": "Foydalanuvchilar va imkoniyatlar",
+        "subtitle": "Platformadagi har bir rol uchun maxsus imkoniyatlar",
+        "patients": {
+            "badge": "BEPUL",
+            "title": "Bemorlar uchun",
+            "subtitle": "Barcha funksiyalar bepul",
+            "feature1": {
+                "title": "Kirish / Ro'yxatdan o'tish",
+                "description": "Login yoki Register orqali platformaga kirish"
+            },
+            "feature2": {
+                "title": "Klinikalar va xizmatlarni qidirish",
+                "description": "Filtrlar bilan eng mos klinikalarni toping"
+            },
+            "feature3": {
+                "title": "Qabulga yozilish",
+                "description": "Onlayn shifokorga yozilish tizimi"
+            },
+            "feature4": {
+                "title": "Sharhlar va baholash",
+                "description": "Klinikalar va xizmatlarni baholash"
+            },
+            "feature5": {
+                "title": "Tashriflar tarixi",
+                "description": "Oxirgi qabullar tarixi (asosiy)"
+            },
+            "feature6": {
+                "title": "Dori eslatmalari",
+                "description": "Dori qabul qilish uchun eslatmalar"
+            },
+            "price": "100% BEPUL",
+            "price_note": "Bemorlar uchun hech qanday to'lov yo'q"
+        },
+        "clinics": {
+            "title": "Klinikalar uchun",
+            "subtitle": "2 pullik tarif",
+            "starter": {
+                "name": "Starter – $70/oy",
+                "feature1": "Klinika ro'yxati va login",
+                "feature2": "Bemorlarning yozuvlarini qabul qilish",
+                "feature3": "5 tagacha xizmat",
+                "feature4": "1 filial",
+                "feature5": "1 administrator",
+                "feature6": "Analitika yo'q"
+            },
+            "pro": {
+                "name": "Pro – $100/oy",
+                "badge": "ENG YAXSHI TANLOV",
+                "subtitle": "Starter + barcha qo'shimcha imkoniyatlar:",
+                "feature1": "Qidiruvda yuqori o'rin",
+                "feature2": "To'liq analitika paneli",
+                "feature3": "Shifokorlar akkauntlari",
+                "feature4": "Retseptlar yozish imkoniyati",
+                "feature5": "Cheksiz filiallar",
+                "feature6": "3 tagacha administrator"
+            },
+            "cta": "Klinikani ro'yxatdan o'tkazish"
+        },
+        "note": {
+            "title": "Muhim eslatma",
+            "description": "Bemorlar uchun barcha funksiyalar doim bepul bo'ladi. Klinikalar esa ro'yxatdan o'tgandan so'ng o'zlariga mos tarifni tanlashlari kerak. Funksiyalar avtomatik ravishda tanlangan tarifga qarab cheklanadi."
+        }
+    },
+    "benefits": {
+        "title": "Hamma uchun afzalliklar",
+        "subtitle": "ShifoYo'l bemorlar va klinikalar uchun qiymat yaratadi",
+        "users": {
+            "title": "Bemorlar uchun",
+            "item1": {
+                "title": "Sog'liqni yaxshiroq boshqarish",
+                "description": "Dori-darmonlar va shifokor qabullari haqida unutmang"
+            },
+            "item2": {
+                "title": "Vaqtni tejash",
+                "description": "Qo'ng'iroqlar va navbatlarsiz onlayn yoziling"
+            },
+            "item3": {
+                "title": "Eng yaxshi tanlov",
+                "description": "Eng yaxshi narxlar va sharhlar bilan klinikalarni toping"
+            }
+        },
+        "clinics": {
+            "title": "Klinikalar uchun",
+            "item1": {
+                "title": "Ko'proq bemorlar",
+                "description": "Platforma orqali yangi mijozlarni jalb qiling"
+            },
+            "item2": {
+                "title": "Raqamli mavjudlik",
+                "description": "Onlayn professional profil"
+            },
+            "item3": {
+                "title": "Qulay boshqaruv",
+                "description": "Yozuvlarni avtomatlashtirish va analitika"
+            }
+        }
+    },
+    "cta_banner": {
+        "title": "ShifoYo'lga qo'shilishga tayyormisiz?",
+        "description": "Klinikangizni ro'yxatdan o'tkazing yoki ilovaga erta kirish huquqini oling",
+        "button1": "Klinikani ro'yxatdan o'tkazish",
+        "button2": "Erta kirish huquqini olish"
+    },
+    "contact": {
+        "title": "Biz bilan bog'laning",
+        "subtitle": "Savollaringiz bormi yoki hamkorlikni muhokama qilmoqchimisiz? Bizga yozing!",
+        "form": {
+            "title": "Xabar yuborish",
+            "name": "Ism",
+            "email": "Elektron pochta",
+            "message": "Xabar",
+            "submit": "Xabar yuborish"
+        },
+        "info": {
+            "title": "Kontaktlar ma'lumotlari",
+            "email": {
+                "label": "Elektron pochta"
+            },
+            "phone": {
+                "label": "Telefon"
+            },
+            "address": {
+                "label": "Manzil",
+                "value": "Toshkent, O'zbekiston"
+            }
+        }
+    },
+    "footer": {
+        "about": "ShifoYo'l — bu klinikalarni bemorlar bilan bog'laydigan zamonaviy tibbiy platforma.",
+        "links": {
+            "title": "Havolalar",
+            "features": "Imkoniyatlar",
+            "pricing": "Narxlar",
+            "benefits": "Afzalliklar",
+            "contact": "Kontaktlar"
+        },
+        "social": {
+            "title": "Ijtimoiy tarmoqlar"
+        },
+        "legal": {
+            "title": "Huquqiy"
+        },
+        "copyright": "© 2026 ShifoYo'l. Barcha huquqlar himoyalangan.",
+        "privacy": "Maxfiylik siyosati",
+        "terms": "Foydalanish shartlari",
+        "beta": "Tez orada ishga tushadi — Beta versiya 2026"
+    },
+    "registration_modal": {
+        "title": "Klinikani ro'yxatdan o'tkazish",
+        "description": "Platformamizga qo'shilish uchun quyidagi shaklni to'ldiring. Biz siz bilan tez orada bog'lanamiz.",
+        "clinic_name": "Klinika nomi",
+        "admin_name": "Administrator ismi",
+        "phone": "Telefon raqami",
+        "email": "Elektron pochta",
+        "city": "Shahar",
+        "address": "Manzil",
+        "comments": "Qo'shimcha izohlar",
+        "submit": "So'rov yuborish",
+        "success_message": "Rahmat! Sizning so'rovingiz qabul qilindi. Tez orada siz bilan bog'lanamiz."
+    }
+}
