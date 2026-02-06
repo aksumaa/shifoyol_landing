@@ -35,6 +35,7 @@
         "stat2": "Qo'llab-quvvatlash"
     },
     "problem": {
+        "badge": "Muammolar",
         "title": "Biz hal qiladigan muammolar",
         "subtitle": "Zamonaviy tibbiyot zamonaviy yechimlarni talab qiladi",
         "item1": {
@@ -249,6 +250,24 @@
             }
         }
     },
+    "app": {
+        "title": "Ilovani yuklab oling",
+        "subtitle": "Dori eslatmalari, onlayn yozilish va eng yaqin klinikalarni qidirish — hammasi telefoningizda.",
+        "download_on": "Download on the",
+        "get_it_on": "GET IT ON",
+        "how_title": "Qanday ishlaydi",
+        "step1": "Dori vaqtida eslatmalar — hech narsani unutmang.",
+        "step2": "Klinikaga onlayn yoziling — qo'ng'iroq qilmasdan.",
+        "step3": "Eng yaqin klinikalarni toping — narx va sharhlar bilan.",
+        "mock": {
+            "reminder_label": "Eslatma",
+            "reminder": "Dori vaqtida",
+            "booking_label": "Yozilish",
+            "booking": "Klinikaga yozilish",
+            "search_label": "Qidiruv",
+            "search": "Klinikalarni topish"
+        }
+    },
     "footer": {
         "about": "ShifoYo'l — bu klinikalarni bemorlar bilan bog'laydigan zamonaviy tibbiy platforma.",
         "links": {
@@ -269,6 +288,19 @@
         "terms": "Foydalanish shartlari",
         "beta": "Tez orada ishga tushadi — Beta versiya 2026"
     },
+    "modal": {
+        "title": "Klinikani ro'yxatdan o'tkazish",
+        "clinic_name": "Klinika nomi",
+        "login": "Login (Email yoki foydalanuvchi nomi)",
+        "password": "Parol",
+        "submit": "Ro'yxatdan o'tish",
+        "success": "Ro'yxatdan o'tish muvaffaqiyatli yakunlandi!",
+        "error": {
+            "clinic_name": "Klinika nomi kiritilishi shart",
+            "login": "To'g'ri email yoki login kiriting",
+            "password": "Parol kamida 8 ta belgidan iborat bo'lishi kerak"
+        }
+    },
     "registration_modal": {
         "title": "Klinikani ro'yxatdan o'tkazish",
         "description": "Platformamizga qo'shilish uchun quyidagi shaklni to'ldiring. Biz siz bilan tez orada bog'lanamiz.",
@@ -281,5 +313,38 @@
         "comments": "Qo'shimcha izohlar",
         "submit": "So'rov yuborish",
         "success_message": "Rahmat! Sizning so'rovingiz qabul qilindi. Tez orada siz bilan bog'lanamiz."
+    },
+    "privacy_page": {
+        "badge": "Huquqiy hujjat",
+        "title": "Maxfiylik siyosati",
+        "last_updated": "Oxirgi yangilanish: 2026",
+        "intro": "ShifoYo'l («biz», «bizning») sizning maxfiyligingizni hurmat qiladi. Ushbu Maxfiylik siyosati platformamizdan foydalanishda qanday ma'lumotlarni to'plashimiz, ishlatishimiz va himoya qilishimizni tushuntiradi.",
+        "s1_title": "To'plangan ma'lumotlar",
+        "s1_text": "Biz ro'yxatdan o'tish, klinikaga yozilish va ilova ishlatish paytida ism, elektron pochta, telefon raqami va tibbiy ma'lumotlar (shifokor qabullari, dori eslatmalari) kabi ma'lumotlarni to'plashimiz mumkin. Bu ma'lumotlar xizmatlarni taqdim etish va yaxshilash uchun ishlatiladi.",
+        "s2_title": "Ma'lumotlardan foydalanish",
+        "s2_text": "To'plangan ma'lumotlar faqat xizmat ko'rsatish, shaxsiy eslatmalar yuborish, platformani rivojlantirish va qonuniy talablarga javob berish uchun ishlatiladi. ShifoYo'l ma'lumotlaringizni uchinchi tomonlarga sotmaydi.",
+        "s3_title": "Xavfsizlik",
+        "s3_text": "Ma'lumotlaringiz shifrlangan aloqalar va xavfsiz serverlar orqali qo'llab-quvvatlanadi. Shunga qaramay, Internet orqali uzatish 100% xavfsizligini kafolatlay olmaymiz.",
+        "s4_title": "Cookie va texnologiyalar",
+        "s4_text": "Veb-sayt va ilova ishlatilishi tahlilini yaxshilash uchun cookie va o'xshash texnologiyalardan foydalanamiz. Brauzer sozlamalari orqali cookielarni boshqarishingiz mumkin.",
+        "s5_title": "Aloqa",
+        "s5_text": "Maxfiylik bo'yicha savollaringiz bo'lsa, shifo.yol@gmail.com orqali biz bilan bog'laning.",
+        "back_home": "Bosh sahifaga"
+    },
+    "terms_page": {
+        "title": "Foydalanish shartlari",
+        "last_updated": "Oxirgi yangilanish: 2026",
+        "intro": "ShifoYo'l platformasi va ilovasidan foydalanish orqali siz ushbu Foydalanish shartlariga rozilik bildirasiz. Iltimos, diqqat bilan o'qing.",
+        "s1_title": "Xizmatlar tavsifi",
+        "s1_text": "ShifoYo'l bemorlar va klinikalarni bog'lovchi tibbiy platforma hisoblanadi. Xizmatlar orasida dori eslatmalari, onlayn klinikaga yozilish va klinikalarni qidirish mavjud. Biz xizmatlarni oldindan xabar berilmasdan yangilash huquqini saqlab qolamiz.",
+        "s2_title": "Foydalanuvchi majburiyatlari",
+        "s2_text": "Platformadan foydalanuvchilar to'g'ri va to'liq ma'lumot berishlari, boshqalarning ma'lumotlariga hurmat ko'rsatishlari va qonunlarga rioya qilishlari shart. Noqonuniy yoki zararli harakatlar taqiqlanadi.",
+        "s3_title": "Klinikalar uchun tariflar",
+        "s3_text": "Klinikalar uchun pullik tariflar qo'llanadi. Narxlar va imkoniyatlar platformada ko'rsatiladi. To'lov amalga oshirilgach, tanlangan davr uchun xizmatlar aktivlashtiriladi.",
+        "s4_title": "Javobgarlik cheklovi",
+        "s4_text": "ShifoYo'l faqat platforma va yozilish tizimini taqdim etadi. Tibbiy maslahat yoki davolash vazifasini bajarmaydi. Har qanday sog'liq qarorlari uchun mutaxassis shifokorlarga murojaat qiling.",
+        "s5_title": "O'zgarishlar",
+        "s5_text": "Biz ushbu shartlarni yangilash huquqini saqlab qolamiz. O'zgarishlar sahifada e'lon qilinadi. Davom etadigan foydalanish yangi shartlarga rozilik hisoblanadi.",
+        "back_home": "Bosh sahifaga"
     }
 }

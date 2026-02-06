@@ -60,15 +60,19 @@ function handleNavbarScroll() {
 
 // Modal handling
 function openRegistrationModal() {
-    const modal = document.getElementById('registration-modal');
-    modal.classList.remove('hidden');
-    modal.classList.add('flex');
+    const modal = document.getElementById('registrationModal');
+    if (modal) {
+        modal.classList.remove('hidden');
+        modal.classList.add('flex');
+    }
 }
 
 function closeRegistrationModal() {
-    const modal = document.getElementById('registration-modal');
-    modal.classList.remove('flex');
-    modal.classList.add('hidden');
+    const modal = document.getElementById('registrationModal');
+    if (modal) {
+        modal.classList.remove('flex');
+        modal.classList.add('hidden');
+    }
 }
 
 // Spotlight card effect
@@ -87,20 +91,38 @@ document.addEventListener('DOMContentLoaded', () => {
     const savedLang = localStorage.getItem('language') || 'uz';
     switchLanguage(savedLang);
 
-    // Add scroll listener for navbar
-    window.addEventListener('scroll', handleNavbarScroll);
+    // Add scroll listener for navbar (only on main page with hero)
+    if (document.getElementById('registrationModal')) {
+        window.addEventListener('scroll', handleNavbarScroll);
+    }
 
     // Add click listeners for language switcher
     document.querySelectorAll('.language-switcher button').forEach(button => {
         button.addEventListener('click', () => switchLanguage(button.dataset.lang));
     });
 
-    // Add click listeners for modals
-    document.querySelector('[onclick="openRegistrationModal()"]').addEventListener('click', openRegistrationModal);
-    document.querySelector('[onclick="closeRegistrationModal()"]').addEventListener('click', closeRegistrationModal);
+    // Modal: close button and overlay
+    const closeBtn = document.getElementById('closeRegistrationModal');
+    if (closeBtn) closeBtn.addEventListener('click', closeRegistrationModal);
+    const modal = document.getElementById('registrationModal');
+    if (modal) {
+        modal.addEventListener('click', (e) => { if (e.target === modal) closeRegistrationModal(); });
+    }
 
     // Add mousemove listener for spotlight cards
     document.querySelectorAll('.spotlight-card').forEach(card => {
         card.addEventListener('mousemove', handleSpotlight);
     });
+
+    // Mobile app section: cycle steps and phone mockup slides
+    const appSteps = document.querySelectorAll('.app-step');
+    const appSlides = document.querySelectorAll('.app-screen-slide');
+    if (appSteps.length && appSlides.length) {
+        let stepIndex = 0;
+        setInterval(() => {
+            appSteps.forEach((el, i) => el.classList.toggle('active', i === stepIndex));
+            appSlides.forEach((el, i) => el.classList.toggle('active', i === stepIndex));
+            stepIndex = (stepIndex + 1) % Math.min(appSteps.length, appSlides.length);
+        }, 3200);
+    }
 });

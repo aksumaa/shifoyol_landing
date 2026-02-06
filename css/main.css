@@ -1867,6 +1867,155 @@ video {
   animation: clipIn 1.2s cubic-bezier(0.25, 1, 0.5, 1) both;
 }
 
+/* CTA arrow bounce */
+.cta-arrow-wrap {
+  animation: arrowBounce 1.5s ease-in-out infinite;
+}
+.cta-arrow-icon {
+  filter: drop-shadow(0 2px 4px rgba(0, 0, 0, 0.2));
+}
+@keyframes arrowBounce {
+  0%, 100% { transform: translateX(0); opacity: 1; }
+  50% { transform: translateX(6px); opacity: 0.9; }
+}
+
+/* Hero text reveal */
+.hero-word.animate-reveal,
+.hero-subtitle.animate-reveal {
+  opacity: 0;
+  animation: revealLine 0.8s cubic-bezier(0.25, 1, 0.5, 1) forwards;
+  animation-delay: calc(0.15s * (var(--i, 0) + 1));
+}
+@keyframes revealLine {
+  0% {
+    opacity: 0;
+    transform: translateY(20px);
+  }
+  100% {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+/* Mobile app section: steps */
+.app-step {
+  opacity: 0.5;
+  transform: translateX(-8px);
+  transition: opacity 0.5s ease, transform 0.5s ease;
+}
+.app-step.active {
+  opacity: 1;
+  transform: translateX(0);
+}
+
+/* Mobile app section: phone screen slides */
+.app-screen-slide {
+  position: absolute;
+  inset: 0;
+  padding: 1rem;
+  opacity: 0;
+  transform: translateY(10px);
+  transition: opacity 0.5s ease, transform 0.5s ease;
+  pointer-events: none;
+}
+.app-screen-slide.active {
+  position: relative;
+  opacity: 1;
+  transform: translateY(0);
+  pointer-events: auto;
+}
+.app-screen-content {
+  position: relative;
+  min-height: 120px;
+}
+
+/* Phone mockup float */
+.phone-mockup-wrap .phone-mockup {
+  animation: phoneFloat 4s ease-in-out infinite;
+}
+@keyframes phoneFloat {
+  0%, 100% { transform: rotate(-6deg) translateY(0); }
+  50% { transform: rotate(-6deg) translateY(-8px); }
+}
+
+/* Mac folder style – light blue body, darker tab behind top-left, same width & height for every card */
+.mac-folder-card {
+  position: relative;
+  width: 100%;
+  height: 340px;
+  transition: transform 0.4s ease, box-shadow 0.4s ease;
+}
+.mac-folder-card:hover {
+  transform: scale(1.02);
+  box-shadow: 0 20px 40px rgba(0, 0, 0, 0.08);
+}
+/* Tab: darker blue, behind the body, top-left (Mac folder back flap) */
+.mac-folder-tab {
+  position: absolute;
+  z-index: 0;
+  top: 0;
+  left: 0;
+  width: 42%;
+  max-width: 160px;
+  height: 38%;
+  max-height: 92px;
+  background: linear-gradient(165deg, #5b7fc9 0%, #6B94D6 50%, #5b7fc9 100%);
+  border-radius: 14px 14px 4px 4px;
+  box-shadow: 0 2px 8px rgba(0, 0, 0, 0.12);
+}
+/* Body: light blue, all corners rounded, vertical gradient */
+.mac-folder-body {
+  position: relative;
+  z-index: 1;
+  width: 100%;
+  height: 100%;
+  padding: 2rem 1.75rem 2rem;
+  background: linear-gradient(180deg, #c5e3ff 0%, #b0d8f5 40%, #9eccee 100%);
+  border-radius: 20px;
+  box-shadow: 0 4px 16px rgba(0, 0, 0, 0.06), 0 1px 0 rgba(255, 255, 255, 0.5) inset;
+  display: flex;
+  flex-direction: column;
+}
+/* Icon circle – soft blue, dark icon */
+.mac-folder-icon {
+  width: 3.25rem;
+  height: 3.25rem;
+  margin-bottom: 1.25rem;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  background: rgba(255, 255, 255, 0.7);
+  border-radius: 50%;
+  box-shadow: 0 2px 8px rgba(0, 0, 0, 0.06);
+}
+.mac-folder-title {
+  font-size: 1.35rem;
+  font-weight: 700;
+  color: #1e3a5f;
+  line-height: 1.3;
+  margin-bottom: 0.5rem;
+  flex-shrink: 0;
+}
+.mac-folder-desc {
+  font-size: 0.9375rem;
+  line-height: 1.55;
+  color: #2c5282;
+  flex: 1;
+  min-height: 0;
+  overflow-y: auto;
+}
+
+/* Metamusic-style: smooth fade-in-up for sections (optional use) */
+.animate-fade-in-up {
+  opacity: 0;
+  transform: translateY(24px);
+  transition: opacity 0.7s cubic-bezier(0.25, 1, 0.5, 1), transform 0.7s cubic-bezier(0.25, 1, 0.5, 1);
+}
+.animate-fade-in-up.is-visible {
+  opacity: 1;
+  transform: translateY(0);
+}
+
 /* Smooth Scroll */
 
 html {
