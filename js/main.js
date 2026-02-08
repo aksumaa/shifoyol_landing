@@ -87,6 +87,11 @@ function handleSpotlight(event) {
 
 // DOMContentLoaded event listener
 document.addEventListener('DOMContentLoaded', () => {
+    // Track landing page visit
+    if (typeof amplitude !== 'undefined') {
+        amplitude.track('landing_visit');
+    }
+
     // Set initial language
     const savedLang = localStorage.getItem('language') || 'uz';
     switchLanguage(savedLang);
@@ -113,6 +118,16 @@ document.addEventListener('DOMContentLoaded', () => {
     document.querySelectorAll('.spotlight-card').forEach(card => {
         card.addEventListener('mousemove', handleSpotlight);
     });
+
+    // Add click listener for details button tracking
+    const detailsButton = document.getElementById('details-button');
+    if (detailsButton) {
+        detailsButton.addEventListener('click', () => {
+            if (typeof amplitude !== 'undefined') {
+                amplitude.track('clicked_details_button');
+            }
+        });
+    }
 
     // Mobile app section: cycle steps and phone mockup slides
     const appSteps = document.querySelectorAll('.app-step');
