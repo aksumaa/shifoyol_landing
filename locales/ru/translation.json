@@ -291,14 +291,12 @@
     "modal": {
         "title": "Регистрация клиники",
         "clinic_name": "Название клиники",
-        "login": "Логин (Email или имя пользователя)",
-        "password": "Пароль",
+        "phone": "Номер телефона",
         "submit": "Зарегистрироваться",
         "success": "Регистрация успешно завершена!",
         "error": {
             "clinic_name": "Введите название клиники",
-            "login": "Введите корректный email или логин",
-            "password": "Пароль должен содержать не менее 8 символов"
+            "phone": "Введите корректный номер телефона"
         }
     },
     "registration_modal": {
@@ -330,6 +328,10 @@
         "s5_title": "Связь",
         "s5_text": "По вопросам конфиденциальности пишите нам на shifo.yol@gmail.com.",
         "back_home": "На главную"
+    },
+    "seo_section": {
+        "title": "ShifoYo'l — платформа для клиник и пациентов Ташкента",
+        "paragraph": "Поиск <strong>частных клиник Ташкента</strong>, <strong>лучшие клиники Ташкента</strong>, <strong>клиники Ташкента цены</strong>. <strong>Medical center</strong>, <strong>dental clinic</strong>, <strong>семейная клиника</strong>, <strong>ЛОР клиника</strong>, <strong>глазная клиника</strong>. Онлайн-запись, <strong>номер клиники</strong>, <strong>анализы</strong>. <strong>Doctor Tashkent</strong>, <strong>klinika 24/7</strong>."
     },
     "terms_page": {
         "title": "Условия использования",

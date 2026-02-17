@@ -291,14 +291,12 @@
     "modal": {
         "title": "Klinikani ro'yxatdan o'tkazish",
         "clinic_name": "Klinika nomi",
-        "login": "Login (Email yoki foydalanuvchi nomi)",
-        "password": "Parol",
+        "phone": "Telefon raqami",
         "submit": "Ro'yxatdan o'tish",
         "success": "Ro'yxatdan o'tish muvaffaqiyatli yakunlandi!",
         "error": {
             "clinic_name": "Klinika nomi kiritilishi shart",
-            "login": "To'g'ri email yoki login kiriting",
-            "password": "Parol kamida 8 ta belgidan iborat bo'lishi kerak"
+            "phone": "To'g'ri telefon raqamini kiriting"
         }
     },
     "registration_modal": {
@@ -330,6 +328,10 @@
         "s5_title": "Aloqa",
         "s5_text": "Maxfiylik bo'yicha savollaringiz bo'lsa, shifo.yol@gmail.com orqali biz bilan bog'laning.",
         "back_home": "Bosh sahifaga"
+    },
+    "seo_section": {
+        "title": "ShifoYo'l — Toshkent klinikalari va bemorlar uchun platforma",
+        "paragraph": "Toshkent xususiy klinikalari, <strong>eng yaxshi klinikalar Toshkent</strong>, <strong>klinikalar Toshkent narxlari</strong>. <strong>Medical center</strong>, <strong>dental clinic</strong>, <strong>oilaviy klinika</strong>, <strong>LOR klinika</strong>, <strong>ko'z klinikasi</strong>. Onlayn yozilish, <strong>klinika raqami</strong>, <strong>tahlillar</strong>. <strong>Doctor Tashkent</strong>, <strong>klinika 24/7</strong>."
     },
     "terms_page": {
         "title": "Foydalanish shartlari",

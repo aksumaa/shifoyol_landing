@@ -106,6 +106,53 @@ document.addEventListener('DOMContentLoaded', () => {
         button.addEventListener('click', () => switchLanguage(button.dataset.lang));
     });
 
+    // Clinic registration form submit
+    const clinicForm = document.getElementById('clinicRegistrationForm');
+    if (clinicForm) {
+        clinicForm.addEventListener('submit', async (e) => {
+            e.preventDefault();
+            const clinicName = document.getElementById('clinicName')?.value?.trim();
+            const phoneNumber = document.getElementById('clinicPhone')?.value?.trim();
+
+            if (!clinicName || !phoneNumber) return;
+
+            const submitBtn = clinicForm.querySelector('button[type="submit"]');
+            const successMsg = document.getElementById('successMessage');
+            const hideFields = () => {
+                document.getElementById('clinicNameError')?.classList.add('hidden');
+                document.getElementById('clinicPhoneError')?.classList.add('hidden');
+            };
+
+            hideFields();
+            submitBtn.disabled = true;
+
+            try {
+                const res = await fetch('https://api.shifoyol.uz/v1/landing/contact', {
+                    method: 'POST',
+                    headers: { 'Content-Type': 'application/json' },
+                    body: JSON.stringify({ clinicName, phoneNumber })
+                });
+
+                if (res.ok) {
+                    clinicForm.reset();
+                    successMsg?.classList.remove('hidden');
+                    setTimeout(() => {
+                        successMsg?.classList.add('hidden');
+                        closeRegistrationModal();
+                    }, 2000);
+                } else {
+                    const err = document.getElementById('clinicPhoneError');
+                    if (err) { err.textContent = 'Xatolik yuz berdi. Qaytadan urinib ko\'ring.'; err.classList.remove('hidden'); }
+                }
+            } catch {
+                const err = document.getElementById('clinicPhoneError');
+                if (err) { err.textContent = 'Tarmoq xatosi. Qaytadan urinib ko\'ring.'; err.classList.remove('hidden'); }
+            } finally {
+                submitBtn.disabled = false;
+            }
+        });
+    }
+
     // Modal: close button and overlay
     const closeBtn = document.getElementById('closeRegistrationModal');
     if (closeBtn) closeBtn.addEventListener('click', closeRegistrationModal);
