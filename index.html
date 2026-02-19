@@ -65,6 +65,16 @@
         "description": "Умная платформа для управления здоровьем. Поиск клиник Ташкента, онлайн-запись, напоминания о лекарствах."
     }
     </script>
+    <!-- Google tag (gtag.js) -->
+    <script async src="https://www.googletagmanager.com/gtag/js?id=G-XWDFW6MCDQ">
+    </script>
+    <script>
+        window.dataLayer = window.dataLayer || [];
+        function gtag() { dataLayer.push(arguments); }
+        gtag('js', new Date());
+
+        gtag('config', 'G-XWDFW6MCDQ');
+    </script>
 </head>
 
 <body class="font-sans antialiased bg-slate-50 text-slate-900">
@@ -1286,7 +1296,8 @@
             <div class="flex flex-col items-center">
                 <!-- Contact Info -->
                 <div class="w-full max-w-2xl animate-clip-in" style="animation-delay: 0.2s">
-                    <h3 class="text-2xl font-bold mb-4 text-center" data-i18n="contact.info.title">Aloqa ma'lumotlari</h3>
+                    <h3 class="text-2xl font-bold mb-4 text-center" data-i18n="contact.info.title">Aloqa ma'lumotlari
+                    </h3>
                     <div class="grid grid-cols-2 gap-4 md:gap-6">
                         <div class="flex items-start gap-3">
                             <div
