@@ -1,0 +1,538 @@
+{
+    "nav": {
+        "features": "Features",
+        "clinics": "Clinics",
+        "pricing": "Pricing",
+        "benefits": "Benefits",
+        "contact": "Contact",
+        "how": "How it works",
+        "faq": "FAQ",
+        "menu": "Menu",
+        "instagram": "Instagram",
+        "telegram": "Telegram",
+        "cta": "Register a clinic",
+        "skip": "Skip to content",
+        "primary": "Primary",
+        "language": "Language"
+    },
+    "theme": {
+        "toDark": "Switch to dark mode",
+        "toLight": "Switch to light mode"
+    },
+    "hero": {
+        "card": {
+            "title": "Launching soon",
+            "subtitle": "Beta version",
+            "feature1": "Medication reminders",
+            "feature2": "Online clinic booking",
+            "feature3": "Smart clinic search"
+        },
+        "title1": "Medicine should not keep you waiting.",
+        "title2": "Like a pulse — precise.",
+        "eyebrow": "ShifoYo'l",
+        "title3": "and patients",
+        "subtitle": "Medication reminders, online booking, and nearby clinic search.",
+        "marquee": {
+            "label": "Online booking, clinic search, dental, ENT, family doctor",
+            "booking": "Online booking",
+            "search": "Clinic search",
+            "dental": "Dental",
+            "ent": "ENT",
+            "family": "Family doctor"
+        },
+        "visual": "A rotating DNA helix and an ECG line",
+        "cta": {
+            "primary": "Register a clinic",
+            "secondary": "Learn more",
+            "app": "Open the app",
+            "discover": "Explore clinics"
+        },
+        "float": {
+            "doctor": "Doctor",
+            "calendar": "Visit",
+            "meds": "Reminder",
+            "clinic": "Clinic",
+            "slot": "Appointment time"
+        },
+        "shot_alt": "ShifoYo'l app home screen: clinics, booking, and a medication reminder"
+    },
+    "story": {
+        "eyebrow": "Finding care",
+        "a_title": "Looking for a clinic can feel unclear",
+        "a_text": "Which clinic to contact, which service you need, and when to book — the questions add up.",
+        "b_title": "ShifoYo'l gathers the search in one place",
+        "b_text": "Clinic search, services, prices, and appointment options sit in a clear interface.",
+        "c_title": "Finding a fit feels lighter",
+        "c_text": "ShifoYo'l makes it easier to find a suitable clinic. The next step is booking in the app.",
+        "q_clinic": "Which clinic?",
+        "q_when": "When is the visit?",
+        "q_service": "Which service?",
+        "search": "Search clinics",
+        "services": "Services",
+        "prices": "Prices",
+        "slot": "Appointment time",
+        "services_value": "AI doctor",
+        "prices_value": "In the app",
+        "slot_value": "Quick booking",
+        "book": "Book in the app",
+        "found": "Clinic found"
+    },
+    "narrative": {
+        "eyebrow": "From problem to solution",
+        "title": "What gets in the way — and how ShifoYo'l helps",
+        "rail": "Story sections",
+        "problem": "Problem",
+        "solution": "Solution",
+        "next": "Next",
+        "b1": {
+            "problem": "Finding a suitable clinic takes time.",
+            "solution": "Search for clinics and medical services in one place.",
+            "text": "ShifoYo'l brings clinic and medical-service search into one place."
+        },
+        "b2": {
+            "problem": "Comparing service prices takes time.",
+            "solution": "Explore available clinic services and their listed prices.",
+            "text": "Review the services a clinic lists and the prices shown with them.",
+            "caption": "Prices in the app are the ones a clinic lists. This page does not show sample prices."
+        },
+        "b3": {
+            "problem": "Medication schedules are easy to forget.",
+            "solution": "Set a reminder and get notified when it is time.",
+            "text": "The app includes medication reminders: a personal schedule and notifications on your phone."
+        },
+        "b4": {
+            "problem": "Clinics need patients to be able to find them.",
+            "solution": "A clinic profile and a place in search make the clinic visible.",
+            "text": "A registered clinic gets a profile, online booking, and placement in search. Reach depends on the plan."
+        }
+    },
+    "showcase": {
+        "eyebrow": "The app",
+        "title": "Clinics, booking, and reminders on one screen",
+        "text": "The home screen brings nearby clinics and pharmacies, a doctor connection, a medication reminder, and a short health check together.",
+        "point1": "Search clinics and pharmacies on the map",
+        "point2": "Book a visit in a few minutes",
+        "point3": "Medication reminder and AI doctor",
+        "shot_alt": "ShifoYo'l app home screen: clinics, booking, and a medication reminder"
+    },
+    "consultant": {
+        "eyebrow": "AI consultant",
+        "title": "Ask a question and see a clearer next step",
+        "text": "The AI consultant helps with symptom questions, general information about conditions, understanding a lab result, and choosing a clinic or doctor. It does not replace a medical visit.",
+        "point1": "Guidance around symptoms",
+        "point2": "Information on conditions and lab results",
+        "point3": "Help choosing a clinic or doctor",
+        "note": "For a medical decision, speak with a doctor.",
+        "shot_alt": "ShifoYo'l app, AI consultant conversation"
+    },
+    "about": {
+        "tagline": "A modern medical platform",
+        "feature1": "Trusted and secure",
+        "feature2": "Fast and convenient",
+        "feature3": "Fair pricing",
+        "title": "About ShifoYo'l",
+        "description1": "ShifoYo'l is a modern medical platform that connects clinics and patients.",
+        "description2": "It helps clinics reach new patients and helps patients find reliable medical services.",
+        "stat1": "Beta version",
+        "stat2": "Support"
+    },
+    "problem": {
+        "badge": "Problems",
+        "title": "Problems we solve",
+        "subtitle": "Modern medicine needs modern tools",
+        "item1": {
+            "title": "People forget their medication",
+            "description": "Missed doses reduce how well treatment works and can make health worse."
+        },
+        "item2": {
+            "title": "Finding a clinic is hard",
+            "description": "Searching for a reliable and affordable clinic takes time and effort."
+        },
+        "item3": {
+            "title": "Clinics lose patients",
+            "description": "Medical centers without an online presence miss potential patients."
+        }
+    },
+    "solution": {
+        "title": "ShifoYo'l solves these problems in one platform",
+        "description": "We built one ecosystem that connects patients and clinics, so care is easier to reach.",
+        "benefit1": {
+            "title": "For patients",
+            "description": "Reminders, appointments, and clinic search in one app"
+        },
+        "benefit2": {
+            "title": "For clinics",
+            "description": "A digital presence and a way to reach new patients"
+        }
+    },
+    "features": {
+        "title": "Platform features",
+        "subtitle": "What you need to manage care, in one place",
+        "item1": {
+            "title": "Medication reminders",
+            "description": "Smart notifications help you take medicine on time. Set a schedule once and get reminders when you need them.",
+            "point1": "A personal dose schedule",
+            "point2": "Push notifications on your phone",
+            "point3": "A history of doses taken"
+        },
+        "item2": {
+            "title": "Online clinic booking",
+            "description": "Book a doctor at a time that suits you, without calls or queues. Choose a specialist, date, and time in the app.",
+            "point1": "Choose a doctor and a time",
+            "point2": "Confirm the appointment",
+            "point3": "A reminder before the visit"
+        },
+        "item3": {
+            "title": "Smart clinic search",
+            "description": "Find nearby clinics with prices and reviews. Filter by specialty, distance, and the cost of services.",
+            "point1": "Search by location",
+            "point2": "Compare prices",
+            "point3": "Patient reviews"
+        },
+        "item4": {
+            "title": "A page for each clinic",
+            "description": "Each clinic gets a personal page with its services, doctors, and contact details. That is its online presence for patients.",
+            "point1": "A personal page",
+            "point2": "A description of services",
+            "point3": "Online booking"
+        }
+    },
+    "pricing": {
+        "title": "Plans for clinics",
+        "subtitle": "Choose the plan that fits your clinic",
+        "starter": {
+            "name": "Starter",
+            "description": "For smaller clinics",
+            "period": "/month",
+            "feature1": "A clinic profile on the platform",
+            "feature2": "Online booking",
+            "feature3": "Basic placement in search",
+            "feature4": "Email support",
+            "cta": "Choose this plan"
+        },
+        "pro": {
+            "name": "Pro",
+            "description": "For active clinics",
+            "period": "/month",
+            "badge": "Recommended",
+            "feature1": "Top placement in search",
+            "feature2": "An expanded clinic profile",
+            "feature3": "Analytics and statistics",
+            "feature4": "Priority support",
+            "feature5": "A wider reach to patients",
+            "cta": "Choose Pro"
+        },
+        "note": "All prices are in US dollars. Billing is monthly."
+    },
+    "roles": {
+        "title": "Who it's for",
+        "subtitle": "Each role has its own set of features",
+        "patients": {
+            "badge": "FREE",
+            "title": "For patients",
+            "subtitle": "Every feature is free",
+            "feature1": {
+                "title": "Sign in / Register",
+                "description": "Enter the platform with login or registration"
+            },
+            "feature2": {
+                "title": "Search clinics and services",
+                "description": "Find a fitting clinic with filters"
+            },
+            "feature3": {
+                "title": "Book an appointment",
+                "description": "An online system for booking a doctor"
+            },
+            "feature4": {
+                "title": "Reviews and ratings",
+                "description": "Rate clinics and services"
+            },
+            "feature5": {
+                "title": "Visit history",
+                "description": "A basic history of recent appointments"
+            },
+            "feature6": {
+                "title": "Medication reminders",
+                "description": "Reminders for taking medicine"
+            },
+            "price": "100% FREE",
+            "price_note": "There is no charge for patients"
+        },
+        "clinics": {
+            "title": "For clinics",
+            "subtitle": "2 paid plans",
+            "starter": {
+                "name": "Starter – $70/month",
+                "feature1": "Clinic profile and login",
+                "feature2": "Receive patient bookings",
+                "feature3": "Up to 5 services",
+                "feature4": "1 branch",
+                "feature5": "1 administrator",
+                "feature6": "No analytics"
+            },
+            "pro": {
+                "name": "Pro – $100/month",
+                "badge": "BEST CHOICE",
+                "subtitle": "Starter plus every extra feature:",
+                "feature1": "Higher placement in search",
+                "feature2": "A full analytics panel",
+                "feature3": "Doctor accounts",
+                "feature4": "Ability to write prescriptions",
+                "feature5": "Unlimited branches",
+                "feature6": "Up to 3 administrators"
+            },
+            "cta": "Register a clinic"
+        },
+        "note": {
+            "title": "Important note",
+            "description": "Every feature stays free for patients. After registration, clinics choose a plan. Features are limited automatically according to that plan."
+        }
+    },
+    "benefits": {
+        "title": "Benefits for everyone",
+        "subtitle": "ShifoYo'l creates value for patients and clinics",
+        "users": {
+            "title": "For patients",
+            "item1": {
+                "title": "Better care routines",
+                "description": "Don't forget medicine or doctor visits"
+            },
+            "item2": {
+                "title": "Save time",
+                "description": "Book online without calls or queues"
+            },
+            "item3": {
+                "title": "A clearer choice",
+                "description": "Find clinics with prices and reviews"
+            }
+        },
+        "clinics": {
+            "title": "For clinics",
+            "item1": {
+                "title": "More patients",
+                "description": "Reach new patients through the platform"
+            },
+            "item2": {
+                "title": "A digital presence",
+                "description": "A professional profile online"
+            },
+            "item3": {
+                "title": "Simpler operations",
+                "description": "Booking automation and analytics"
+            }
+        }
+    },
+    "cta_banner": {
+        "kicker": "The next step is simple",
+        "title": "Caring for your health is simpler with ShifoYo'l",
+        "description": "Register your clinic or get early access to the app",
+        "button1": "Register a clinic",
+        "button2": "Get early access"
+    },
+    "contact": {
+        "title": "Contact us",
+        "subtitle": "Have a question or want to talk about a partnership? Write to us.",
+        "form": {
+            "title": "Send a message",
+            "name": "Name",
+            "email": "Email",
+            "message": "Message",
+            "submit": "Send message"
+        },
+        "info": {
+            "title": "Contact details",
+            "email": {
+                "label": "Email"
+            },
+            "phone": {
+                "label": "Phone"
+            },
+            "telegram": {
+                "label": "Telegram"
+            },
+            "address": {
+                "label": "Address",
+                "value": "Tashkent, Uzbekistan"
+            }
+        }
+    },
+    "clinics_section": {
+        "eyebrow": "Clinics",
+        "title": "Find a clinic",
+        "subtitle": "Listed clinics come from ShifoYo'l data. Search and booking open in the app.",
+        "empty": "The clinic list is not available on the site right now. Search and booking are in the app.",
+        "open_app": "Open in the app",
+        "view": "View",
+        "filter1": "Nearby",
+        "filter2": "Services",
+        "filter3": "Booking",
+        "search_label": "Search clinics on this page",
+        "search_placeholder": "Clinic name",
+        "search_hint": "This field filters clinics loaded on this page. Booking stays in the app.",
+        "loading": "Loading clinics…",
+        "no_results": "No clinics match this search.",
+        "results": "{count} clinics",
+        "prev": "Previous",
+        "next": "Next"
+    },
+    "app": {
+        "title": "Download the app",
+        "subtitle": "Medication reminders, online booking, and a search for nearby clinics — on your phone.",
+        "download_on": "Download on the",
+        "get_it_on": "GET IT ON",
+        "how_title": "How it works",
+        "step1": "Reminders when it's time for medicine — so nothing is missed.",
+        "step2": "Book a clinic online — without a phone call.",
+        "step3": "Find nearby clinics — with prices and reviews.",
+        "mock": {
+            "reminder_label": "Reminder",
+            "reminder": "Time for medicine",
+            "booking_label": "Booking",
+            "booking": "Book a clinic",
+            "search_label": "Search",
+            "search": "Find clinics"
+        }
+    },
+    "how": {
+        "eyebrow": "How it works",
+        "title": "Four simple steps",
+        "subtitle": "From searching for a clinic to booking in the app.",
+        "step1": {
+            "title": "Search for a clinic",
+            "text": "Browse clinics on this page or open search in the app."
+        },
+        "step2": {
+            "title": "Review the available information",
+            "text": "Look at the clinic details, services, and the prices the clinic has listed."
+        },
+        "step3": {
+            "title": "Choose a suitable option",
+            "text": "Compare what you can see and choose the clinic that fits."
+        },
+        "step4": {
+            "title": "Continue in the app",
+            "text": "Open ShifoYo'l from the App Store or Google Play and finish booking there."
+        }
+    },
+    "faq": {
+        "eyebrow": "Questions",
+        "title": "Frequently asked questions",
+        "subtitle": "About pricing, the app, and clinic registration.",
+        "q1": {
+            "q": "Is the app free for patients?",
+            "a": "Yes. Every feature is 100% free for patients."
+        },
+        "q2": {
+            "q": "How much are the clinic plans?",
+            "a": "Starter is $70 per month. Pro is $100 per month. Prices are in US dollars and billing is monthly."
+        },
+        "q3": {
+            "q": "How do I book an appointment?",
+            "a": "Open the app, choose a clinic, and book online. You do not need to call."
+        },
+        "q4": {
+            "q": "Where do I download the app?",
+            "a": "On the App Store and Google Play. The links are on this site."
+        },
+        "q5": {
+            "q": "How do I register a clinic?",
+            "a": "Press “Register a clinic” and send the clinic name and phone number. You can also write on Telegram: @shifoyol_contact_bot."
+        },
+        "q6": {
+            "q": "How do I reach support?",
+            "a": "Email: shifo.yol@gmail.com, phone: +998 94 167 10 80, Telegram: @shifoyol_contact_bot."
+        },
+        "q7": {
+            "q": "Does the AI consultant replace a doctor?",
+            "a": "No. It offers general guidance on symptoms, conditions, lab results, and choosing a clinic or doctor. For a medical decision, speak with a doctor."
+        },
+        "q8": {
+            "q": "What are the limits of the Starter plan?",
+            "a": "Starter is $70 per month: a clinic profile and login, patient bookings, up to 5 services, 1 branch, 1 administrator, and no analytics. Pro is $100 per month and adds analytics, doctor accounts, prescriptions, unlimited branches, and up to 3 administrators."
+        }
+    },
+    "footer": {
+        "about": "ShifoYo'l is a modern medical platform that connects clinics and patients.",
+        "links": {
+            "title": "Links",
+            "features": "Features",
+            "pricing": "Pricing",
+            "benefits": "Benefits",
+            "contact": "Contact"
+        },
+        "social": {
+            "title": "Social"
+        },
+        "legal": {
+            "title": "Legal"
+        },
+        "copyright": "© 2026 ShifoYo'l. All rights reserved.",
+        "privacy": "Privacy policy",
+        "terms": "Terms of use",
+        "beta": "Launching soon — Beta version 2026"
+    },
+    "modal": {
+        "title": "Register a clinic",
+        "clinic_name": "Clinic name",
+        "phone": "Phone number",
+        "submit": "Register",
+        "close": "Close",
+        "success": "Registration completed successfully.",
+        "error": {
+            "clinic_name": "Clinic name is required",
+            "phone": "Enter a valid phone number",
+            "generic": "Something went wrong. Please try again.",
+            "network": "Network error. Please try again."
+        }
+    },
+    "registration_modal": {
+        "title": "Register a clinic",
+        "description": "Fill in the form to join the platform. We will contact you soon.",
+        "clinic_name": "Clinic name",
+        "admin_name": "Administrator name",
+        "phone": "Phone number",
+        "email": "Email",
+        "city": "City",
+        "address": "Address",
+        "comments": "Additional comments",
+        "submit": "Send request",
+        "success_message": "Thank you. Your request was received. We will contact you soon."
+    },
+    "privacy_page": {
+        "badge": "Legal document",
+        "title": "Privacy policy",
+        "last_updated": "Last updated: 2026",
+        "intro": "ShifoYo'l (“we”, “our”) respects your privacy. This Privacy Policy explains what information we collect, use, and protect when you use our platform.",
+        "s1_title": "Information we collect",
+        "s1_text": "When you register, book a clinic, or use the app, we may collect your name, email, phone number, and medical information such as appointments and medication reminders. This information is used to provide and improve the service.",
+        "s2_title": "How we use information",
+        "s2_text": "Collected information is used only to provide the service, send personal reminders, improve the platform, and meet legal requirements. ShifoYo'l does not sell your information to third parties.",
+        "s3_title": "Security",
+        "s3_text": "Your information is supported by encrypted connections and secure servers. Even so, transmission over the Internet cannot be guaranteed to be 100% secure.",
+        "s4_title": "Cookies and technologies",
+        "s4_text": "We use cookies and similar technologies to understand how the website and app are used. You can manage cookies in your browser settings.",
+        "s5_title": "Contact",
+        "s5_text": "If you have a privacy question, contact us at shifo.yol@gmail.com.",
+        "back_home": "Back to home"
+    },
+    "seo_section": {
+        "title": "ShifoYo'l — a platform for clinics and patients in Tashkent",
+        "paragraph": "Private clinics in Tashkent, <strong>best clinics in Tashkent</strong>, <strong>clinic prices in Tashkent</strong>. <strong>Medical center</strong>, <strong>dental clinic</strong>, <strong>family clinic</strong>, <strong>ENT clinic</strong>, <strong>eye clinic</strong>. Online booking, <strong>clinic phone number</strong>, <strong>lab tests</strong>. <strong>Doctor Tashkent</strong>, <strong>clinic 24/7</strong>."
+    },
+    "terms_page": {
+        "title": "Terms of use",
+        "last_updated": "Last updated: 2026",
+        "intro": "By using the ShifoYo'l platform and app, you agree to these Terms of Use. Please read them carefully.",
+        "s1_title": "Description of services",
+        "s1_text": "ShifoYo'l is a medical platform that connects patients and clinics. Services include medication reminders, online clinic booking, and clinic search. We may update the services without prior notice.",
+        "s2_title": "User responsibilities",
+        "s2_text": "Users must provide accurate and complete information, respect other people's information, and follow the law. Illegal or harmful activity is prohibited.",
+        "s3_title": "Plans for clinics",
+        "s3_text": "Paid plans apply to clinics. Prices and features are shown on the platform. After payment, services are activated for the selected period.",
+        "s4_title": "Limitation of liability",
+        "s4_text": "ShifoYo'l provides the platform and the booking system. It does not give medical advice or treatment. For any health decision, consult a qualified doctor.",
+        "s5_title": "Changes",
+        "s5_text": "We may update these terms. Changes are published on this page. Continued use means you accept the updated terms.",
+        "back_home": "Back to home"
+    }
+}

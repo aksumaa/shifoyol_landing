@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html lang="en" data-theme="light">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="robots" content="noindex, nofollow">
+    <title>Landing clinics — ShifoYo'l</title>
+    <script>
+        (function () {
+            var theme = 'light';
+            try {
+                var stored = localStorage.getItem('theme');
+                if (stored === 'light' || stored === 'dark') theme = stored;
+                else if (window.matchMedia('(prefers-color-scheme: dark)').matches) theme = 'dark';
+            } catch (e) {}
+            document.documentElement.setAttribute('data-theme', theme);
+            document.documentElement.style.colorScheme = theme;
+        })();
+    </script>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:wght@400;500;600;700;800&display=swap" rel="stylesheet">
+    <link rel="icon" type="image/x-icon" href="/public/favicon.ico">
+    <link rel="stylesheet" href="/css/site.css">
+    <link rel="stylesheet" href="/css/admin.css">
+</head>
+<body class="admin-page" data-admin="login">
+    <main class="admin-card">
+        <a class="logo" href="/">
+            <img src="/images/2026-02-06_18.13.05-removebg-preview.png" alt="" width="36" height="36">
+            <span>ShifoYo'l</span>
+        </a>
+        <h1 style="margin-top: 22px">Landing clinics</h1>
+        <p class="lead">Sign in with your console account.</p>
+        <p id="adminStatus" class="hint">Checking session…</p>
+        <form id="loginForm" hidden>
+            <label class="field">
+                <span>Username</span>
+                <input id="username" name="username" type="text" autocomplete="username" required>
+            </label>
+            <label class="field">
+                <span>Password</span>
+                <input id="password" name="password" type="password" autocomplete="current-password" required>
+            </label>
+            <p id="loginError" class="field-error" hidden></p>
+            <button type="submit" class="btn btn-primary">Sign in</button>
+        </form>
+    </main>
+    <script src="/js/api-config.js"></script>
+    <script src="/js/admin.js"></script>
+<script id="dhws-dataInjector" src="../public/dhws-data-injector.js"></script>
+</body>
+</html>

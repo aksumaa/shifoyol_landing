@@ -1,31 +1,39 @@
 /** @type {import('tailwindcss').Config} */
 module.exports = {
   content: [
-    "./index.html",
+    "./*.html",
     "./pages/**/*.html"
   ],
   theme: {
     extend: {
       fontFamily: {
-        sans: ['Inter', 'ui-sans-serif', 'system-ui', 'sans-serif']
+        sans: ['"Plus Jakarta Sans"', 'Inter', 'ui-sans-serif', 'system-ui', 'sans-serif']
       },
       colors: {
         blue: {
-          50: '#eff6ff',
-          100: '#dbeafe',
-          200: '#bfdbfe',
-          300: '#93c5fd',
-          400: '#60a5fa',
-          500: '#3b82f6',
-          600: '#2563eb',
-          700: '#1d4ed8',
-          800: '#1e40af',
-          900: '#1e3a8a'
+          50: '#F5F9FF',
+          100: '#EAF3FF',
+          200: '#D4E6FF',
+          300: '#A8C9FF',
+          400: '#5B9BFF',
+          500: '#3185FF',
+          600: '#1769FF',
+          700: '#1254D4',
+          800: '#0E3F9E',
+          900: '#0A2A6B'
         },
         cyan: {
-          400: '#22d3ee',
-          500: '#06b6d4',
-          600: '#0891b2'
+          50: '#F5F9FF',
+          100: '#EAF3FF',
+          200: '#D4E6FF',
+          400: '#7AABFF',
+          500: '#3185FF',
+          600: '#1769FF'
+        },
+        navy: {
+          800: '#0C2348',
+          900: '#07152E',
+          950: '#040C1C'
         }
       },
       animation: {

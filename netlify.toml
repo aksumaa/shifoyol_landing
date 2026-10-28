@@ -1,0 +1,26 @@
+[build]
+  command = "node scripts/inject-env.js"
+  publish = "."
+
+# /admin/ is the login page (admin/index.html).
+# /admin/dashboard serves the clinic picker without putting login on the public site.
+
+[[redirects]]
+  from = "/admin/login"
+  to = "/admin/"
+  status = 301
+
+[[redirects]]
+  from = "/admin/login.html"
+  to = "/admin/"
+  status = 301
+
+[[redirects]]
+  from = "/admin/dashboard"
+  to = "/admin/dashboard.html"
+  status = 200
+
+[[redirects]]
+  from = "/admin/dashboard/"
+  to = "/admin/dashboard.html"
+  status = 200

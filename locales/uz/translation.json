@@ -1,10 +1,23 @@
 {
     "nav": {
         "features": "Imkoniyatlar",
+        "clinics": "Klinikalar",
         "pricing": "Narxlar",
         "benefits": "Afzalliklar",
         "contact": "Kontaktlar",
-        "cta": "Klinikani ro'yxatdan o'tkazish"
+        "how": "Qanday ishlaydi",
+        "faq": "Savollar",
+        "menu": "Menyu",
+        "instagram": "Instagram",
+        "telegram": "Telegram",
+        "cta": "Klinikani ro'yxatdan o'tkazish",
+        "skip": "Asosiy kontentga o'tish",
+        "primary": "Asosiy menyu",
+        "language": "Til"
+    },
+    "theme": {
+        "toDark": "Tungi mavzuga o'tish",
+        "toLight": "Kunduzgi mavzuga o'tish"
     },
     "hero": {
         "card": {
@@ -14,14 +27,103 @@
             "feature2": "Klinikalarga onlayn yozilish",
             "feature3": "Aqlli klinikalarni qidirish"
         },
-        "title1": "Klinikalar va bemorlarni",
-        "title2": "bog'lovchi zamonaviy",
+        "title1": "Tibbiyot kutmasligi kerak.",
+        "title2": "Pulse kabi — aniq.",
+        "eyebrow": "ShifoYo'l",
         "title3": "tibbiy platforma",
-        "subtitle": "Dori eslatmalari, onlayn yozilish va eng yaqin klinikalarni qidirish — hammasi ShifoYo'lda",
+        "subtitle": "Dori eslatmalari, onlayn yozilish va yaqin klinikalarni qidirish.",
+        "marquee": {
+            "label": "Onlayn yozilish, klinika qidiruv, dental, LOR, oilaviy shifokor",
+            "booking": "Onlayn yozilish",
+            "search": "Klinika qidiruv",
+            "dental": "Dental",
+            "ent": "LOR",
+            "family": "Oilaviy shifokor"
+        },
+        "visual": "Aylanuvchi DNK spiral va yurak urishi chizig'i",
         "cta": {
             "primary": "Klinikani ro'yxatdan o'tkazish",
-            "secondary": "Batafsil"
+            "secondary": "Batafsil",
+            "app": "Ilovani ochish",
+            "discover": "Klinikalarni topish"
+        },
+        "float": {
+            "doctor": "Shifokor",
+            "calendar": "Qabul",
+            "meds": "Eslatma",
+            "clinic": "Klinika",
+            "slot": "Qabul vaqti"
+        },
+        "shot_alt": "ShifoYo'l ilovasining bosh sahifasi: klinikalar, bron va dori eslatmasi"
+    },
+    "story": {
+        "eyebrow": "Sog'liq xizmatini topish",
+        "a_title": "Klinika qidirish chalg'ituvchi bo'lishi mumkin",
+        "a_text": "Qaysi klinikaga murojaat qilish, qanday xizmat kerakligi va qachon yozilish — savollar tez to'planadi.",
+        "b_title": "ShifoYo'l qidiruvni tartibga soladi",
+        "b_text": "Klinika qidiruvi, xizmatlar, narxlar va qabul variantlari bitta tushunarli oynada.",
+        "c_title": "Mos klinika topilganda yengilroq bo'ladi",
+        "c_text": "ShifoYo'l mos klinikani topishni soddalashtiradi. Keyingi qadam — ilovada qabulga yozilish.",
+        "q_clinic": "Qaysi klinika?",
+        "q_when": "Qachon qabul?",
+        "q_service": "Qanday xizmat?",
+        "search": "Klinika qidirish",
+        "services": "Xizmatlar",
+        "prices": "Narxlar",
+        "slot": "Qabul vaqti",
+        "services_value": "AI doktor",
+        "prices_value": "Ilovada",
+        "slot_value": "Tez bron",
+        "book": "Ilovada yozilish",
+        "found": "Klinika topildi"
+    },
+    "narrative": {
+        "eyebrow": "Muammodan yechimgacha",
+        "title": "Nima qiyin — va ShifoYo'l buni qanday yengillashtiradi",
+        "rail": "Hikoya bo'limlari",
+        "problem": "Muammo",
+        "solution": "Yechim",
+        "next": "Keyingi qadam",
+        "b1": {
+            "problem": "Mos klinika topish vaqt oladi.",
+            "solution": "Klinikalar va tibbiy xizmatlarni bir joydan qidiring.",
+            "text": "ShifoYo'l klinikalar va tibbiy xizmatlarni bitta qidiruvda jamlaydi."
+        },
+        "b2": {
+            "problem": "Xizmat narxlarini solishtirish vaqt oladi.",
+            "solution": "Klinika xizmatlari va ko'rsatilgan narxlar bilan tanishing.",
+            "text": "Mavjud xizmatlar va klinika ko'rsatgan narxlarni ilovada ko'rib chiqing.",
+            "caption": "Narxlar klinikalar ko'rsatganidek ilovada chiqadi. Bu sahifada namuna narxlar yo'q."
+        },
+        "b3": {
+            "problem": "Dori jadvalini unutish oson.",
+            "solution": "Eslatma qo'ying va vaqti kelganda bildirishnoma oling.",
+            "text": "Ilovada dori eslatmalari bor: shaxsiy qabul jadvali va telefonga bildirishnomalar."
+        },
+        "b4": {
+            "problem": "Klinikalar bemorlarga ko'rinishi kerak.",
+            "solution": "Klinika profili va qidiruvdagi o'rin klinikani ko'rsatadi.",
+            "text": "Ro'yxatdan o'tgan klinika profil, onlayn yozilish va qidiruvdagi joyni oladi. Qamrov tanlangan tarifga bog'liq."
         }
+    },
+    "showcase": {
+        "eyebrow": "Ilova",
+        "title": "Klinika, qabul va eslatmalar bitta ekranda",
+        "text": "Bosh sahifada yaqin klinika va aptekalar, shifokor bilan bog'lanish, dori eslatmasi va qisqa holat baholash joylashgan.",
+        "point1": "Xaritadan klinika va apteka qidirish",
+        "point2": "Bir necha daqiqada bron qilish",
+        "point3": "Dori eslatmasi va AI doktor",
+        "shot_alt": "ShifoYo'l ilovasining bosh sahifasi: klinikalar, bron va dori eslatmasi"
+    },
+    "consultant": {
+        "eyebrow": "AI konsultant",
+        "title": "Savolingizni yozing, keyingi qadamni tushuning",
+        "text": "AI konsultant alomatlar, kasalliklar haqidagi umumiy ma'lumot, tahlil natijasi va klinika yoki shifokor tanlash bo'yicha yo'l ko'rsatadi. U shifokor qabulining o'rnini bosmaydi.",
+        "point1": "Alomatlar bo'yicha maslahat",
+        "point2": "Kasalliklar va tahlil haqida ma'lumot",
+        "point3": "Klinika yoki shifokor tanlash",
+        "note": "Tibbiy qaror uchun shifokorga murojaat qiling.",
+        "shot_alt": "ShifoYo'l ilovasidagi AI konsultant suhbati"
     },
     "about": {
         "tagline": "Zamonaviy tibbiy platforma",
@@ -131,7 +233,7 @@
             "subtitle": "Barcha funksiyalar bepul",
             "feature1": {
                 "title": "Kirish / Ro'yxatdan o'tish",
-                "description": "Login yoki Register orqali platformaga kirish"
+                "description": "Kirish yoki ro'yxatdan o'tish orqali platformaga kiring"
             },
             "feature2": {
                 "title": "Klinikalar va xizmatlarni qidirish",
@@ -221,7 +323,8 @@
         }
     },
     "cta_banner": {
-        "title": "ShifoYo'lga qo'shilishga tayyormisiz?",
+        "kicker": "Keyingi qadam oddiy",
+        "title": "Sog'liq haqida g'amxo'rlik — ShifoYo'l bilan osonroq",
         "description": "Klinikangizni ro'yxatdan o'tkazing yoki ilovaga erta kirish huquqini oling",
         "button1": "Klinikani ro'yxatdan o'tkazish",
         "button2": "Erta kirish huquqini olish"
@@ -244,11 +347,33 @@
             "phone": {
                 "label": "Telefon"
             },
+            "telegram": {
+                "label": "Telegram"
+            },
             "address": {
                 "label": "Manzil",
                 "value": "Toshkent, O'zbekiston"
             }
         }
+    },
+    "clinics_section": {
+        "eyebrow": "Klinikalar",
+        "title": "Klinikalarni toping",
+        "subtitle": "Ro'yxatdagi klinikalar ShifoYo'l ma'lumotlaridan olinadi. Qidiruv va yozilish ilovada ochiladi.",
+        "empty": "Klinikalar ro'yxati hozircha saytda ochilmayapti. Qidiruv va qabulga yozilish ilovada mavjud.",
+        "open_app": "Ilovada ochish",
+        "view": "Ko'rish",
+        "filter1": "Yaqin atrof",
+        "filter2": "Xizmatlar",
+        "filter3": "Qabul",
+        "search_label": "Sahifadagi klinikalarni qidirish",
+        "search_placeholder": "Klinika nomi",
+        "search_hint": "Bu maydon shu sahifaga yuklangan klinikalarni filtrlaydi. Qabulga yozilish ilovada qoladi.",
+        "loading": "Klinikalar yuklanmoqda…",
+        "no_results": "Bu so'rov bo'yicha klinika topilmadi.",
+        "results": "{count} ta klinika",
+        "prev": "Oldingi",
+        "next": "Keyingi"
     },
     "app": {
         "title": "Ilovani yuklab oling",
@@ -266,6 +391,64 @@
             "booking": "Klinikaga yozilish",
             "search_label": "Qidiruv",
             "search": "Klinikalarni topish"
+        }
+    },
+    "how": {
+        "eyebrow": "Qanday ishlaydi",
+        "title": "To'rt oddiy qadam",
+        "subtitle": "Klinikani qidirishdan ilovadagi yozilishgacha.",
+        "step1": {
+            "title": "Klinikani qidiring",
+            "text": "Shu sahifadagi klinikalarni ko'ring yoki ilovada qidiruvni oching."
+        },
+        "step2": {
+            "title": "Mavjud ma'lumotni ko'rib chiqing",
+            "text": "Klinika haqidagi ma'lumotlar, xizmatlar va klinika ko'rsatgan narxlar bilan tanishing."
+        },
+        "step3": {
+            "title": "Mos variantni tanlang",
+            "text": "Ko'rganlaringizni solishtiring va o'zingizga mos klinikani tanlang."
+        },
+        "step4": {
+            "title": "Ilovadagi yozilishda davom eting",
+            "text": "ShifoYo'l ilovasini App Store yoki Google Play orqali oching va qabulni shu yerda yakunlang."
+        }
+    },
+    "faq": {
+        "eyebrow": "Savollar",
+        "title": "Ko'p so'raladigan savollar",
+        "subtitle": "Narxlar, ilova va klinika ro'yxati haqida.",
+        "q1": {
+            "q": "Bemorlar uchun ilova pullikmi?",
+            "a": "Yo'q. Bemorlar uchun barcha funksiyalar 100% bepul."
+        },
+        "q2": {
+            "q": "Klinikalar uchun tariflar qancha?",
+            "a": "Starter — oyiga $70, Pro — oyiga $100. Narxlar AQSH dollarida, to'lov oylik."
+        },
+        "q3": {
+            "q": "Qabulga qanday yozilaman?",
+            "a": "Ilovani oching, klinikani tanlang va onlayn yoziling. Qo'ng'iroq shart emas."
+        },
+        "q4": {
+            "q": "Ilovani qayerdan yuklab olaman?",
+            "a": "App Store va Google Play orqali. Havolalar saytda mavjud."
+        },
+        "q5": {
+            "q": "Klinikani qanday ro'yxatdan o'tkazaman?",
+            "a": "«Klinikani ro'yxatdan o'tkazish» tugmasini bosing va klinika nomi bilan telefon raqamini yuboring. Telegram orqali ham yozishingiz mumkin: @shifoyol_contact_bot."
+        },
+        "q6": {
+            "q": "Qo'llab-quvvatlash bilan qanday bog'lanaman?",
+            "a": "Email: shifo.yol@gmail.com, telefon: +998 94 167 10 80, Telegram: @shifoyol_contact_bot."
+        },
+        "q7": {
+            "q": "AI konsultant shifokor o'rnini bosadimi?",
+            "a": "Yo'q. U alomatlar, kasalliklar, tahlil natijalari va klinika yoki shifokor tanlash bo'yicha umumiy yo'l ko'rsatadi. Tibbiy qaror uchun shifokorga murojaat qiling."
+        },
+        "q8": {
+            "q": "Starter tarifida qanday cheklovlar bor?",
+            "a": "Starter — oyiga $70: klinika profili va login, bemor yozuvlari, 5 tagacha xizmat, 1 filial, 1 administrator, analitika yo'q. Pro — oyiga $100: analitika, shifokor akkauntlari, retseptlar, cheksiz filiallar va 3 tagacha administrator."
         }
     },
     "footer": {
@@ -293,10 +476,13 @@
         "clinic_name": "Klinika nomi",
         "phone": "Telefon raqami",
         "submit": "Ro'yxatdan o'tish",
+        "close": "Yopish",
         "success": "Ro'yxatdan o'tish muvaffaqiyatli yakunlandi!",
         "error": {
             "clinic_name": "Klinika nomi kiritilishi shart",
-            "phone": "To'g'ri telefon raqamini kiriting"
+            "phone": "To'g'ri telefon raqamini kiriting",
+            "generic": "Xatolik yuz berdi. Qaytadan urinib ko'ring.",
+            "network": "Tarmoq xatosi. Qaytadan urinib ko'ring."
         }
     },
     "registration_modal": {

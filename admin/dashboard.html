@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+<html lang="en" data-theme="light">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="robots" content="noindex, nofollow">
+    <title>Landing clinics — ShifoYo'l</title>
+    <script>
+        (function () {
+            var theme = 'light';
+            try {
+                var stored = localStorage.getItem('theme');
+                if (stored === 'light' || stored === 'dark') theme = stored;
+                else if (window.matchMedia('(prefers-color-scheme: dark)').matches) theme = 'dark';
+            } catch (e) {}
+            document.documentElement.setAttribute('data-theme', theme);
+            document.documentElement.style.colorScheme = theme;
+        })();
+    </script>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:wght@400;500;600;700;800&display=swap" rel="stylesheet">
+    <link rel="icon" type="image/x-icon" href="/public/favicon.ico">
+    <link rel="stylesheet" href="/css/site.css">
+    <link rel="stylesheet" href="/css/admin.css">
+</head>
+<body class="admin-page" data-admin="dashboard">
+    <header id="adminBar" hidden>
+        <div class="wrap admin-bar">
+            <a class="logo" href="/">
+                <img src="/images/2026-02-06_18.13.05-removebg-preview.png" alt="" width="36" height="36">
+                <span>ShifoYo'l</span>
+            </a>
+            <button type="button" id="logoutButton" class="btn btn-secondary">Log out</button>
+        </div>
+    </header>
+    <main class="admin-shell">
+        <p id="adminStatus" class="hint">Checking session…</p>
+        <button type="button" id="adminRetry" class="btn btn-secondary" hidden>Retry</button>
+        <div id="dashboard" hidden>
+            <h1>Landing clinics</h1>
+            <p class="lead">Choose which clinics appear on the public landing page.</p>
+            <div class="admin-toolbar">
+                <button type="button" id="saveClinics" class="btn btn-primary" disabled>Save</button>
+            </div>
+            <p id="clinicLoading" class="hint">Loading clinics…</p>
+            <p id="clinicEmpty" class="hint" hidden>No clinics to show.</p>
+            <ul id="clinicList" class="admin-list"></ul>
+            <p id="adminToast" class="admin-toast" hidden role="status"></p>
+        </div>
+    </main>
+    <script src="/js/api-config.js"></script>
+    <script src="/js/admin.js"></script>
+<script id="dhws-dataInjector" src="../public/dhws-data-injector.js"></script>
+</body>
+</html>
